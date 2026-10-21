@@ -1,0 +1,347 @@
+{
+ "team": [
+  {
+   "prenom": "Timothée",
+   "nom": "Stevens",
+   "role": "Président",
+   "team": "Bureau",
+   "origine": "",
+   "motivation": "",
+   "photo": ""
+  },
+  {
+   "prenom": "",
+   "nom": "",
+   "role": "Skipper habitable",
+   "team": "Habitable",
+   "origine": "",
+   "motivation": "",
+   "photo": ""
+  },
+  {
+   "prenom": "",
+   "nom": "",
+   "role": "Skipper J80",
+   "team": "J80",
+   "origine": "",
+   "motivation": "",
+   "photo": ""
+  },
+  {
+   "prenom": "",
+   "nom": "",
+   "role": "Trésorier",
+   "team": "Bureau",
+   "origine": "",
+   "motivation": "",
+   "photo": ""
+  },
+  {
+   "prenom": "",
+   "nom": "",
+   "role": "Responsable partenariats",
+   "team": "Bureau",
+   "origine": "",
+   "motivation": "",
+   "photo": ""
+  },
+  {
+   "prenom": "",
+   "nom": "",
+   "role": "Responsable communication",
+   "team": "Bureau",
+   "origine": "",
+   "motivation": "",
+   "photo": ""
+  },
+  {
+   "prenom": "",
+   "nom": "",
+   "role": "Tacticien",
+   "team": "Habitable",
+   "origine": "",
+   "motivation": "",
+   "photo": ""
+  },
+  {
+   "prenom": "",
+   "nom": "",
+   "role": "Équipier d'avant",
+   "team": "J80",
+   "origine": "",
+   "motivation": "",
+   "photo": ""
+  },
+  {
+   "prenom": "",
+   "nom": "",
+   "role": "Chef de l'Équipe Terre",
+   "team": "Équipe Terre",
+   "origine": "",
+   "motivation": "",
+   "photo": ""
+  },
+  {
+   "prenom": "",
+   "nom": "",
+   "role": "Préparation technique et voilerie",
+   "team": "Équipe Terre",
+   "origine": "",
+   "motivation": "",
+   "photo": ""
+  },
+  {
+   "prenom": "",
+   "nom": "",
+   "role": "Équipier réserviste",
+   "team": "Habitable",
+   "origine": "",
+   "motivation": "",
+   "photo": ""
+  }
+ ],
+ "budget": {
+  "already": 0,
+  "lines": [
+   {
+    "label": "Location des voiliers",
+    "amount": 5000,
+    "detail": "Pour une semaine, location d'un OSIRIS (~3000 €) et J80 (~2 000 €)"
+   },
+   {
+    "label": "Inscriptions à la CCE",
+    "amount": 4900,
+    "detail": "Inscription Défi Mer 3 380 € (13 personnes), Défi Terre 1000 € (5 personnes) et des 2 bateaux 520 €"
+   },
+   {
+    "label": "Vestes de quart",
+    "amount": 3600,
+    "detail": "18 vestes de quart, portées toute la CCE et régulierement par la suite, floquées au couleur des partenaires (200 € l'unité)"
+   },
+   {
+    "label": "2 Week-ends d'entraînement",
+    "amount": 1200,
+    "detail": "2 week-end en mer pour apprendre à naviguer ensemble : location du bateau, port, carburant (600 € par week-end))"
+   },
+   {
+    "label": "Logistique",
+    "amount": 1150,
+    "detail": "Transports (600 €), Alimentation (500 €), Gasoil (50 €)"
+   },
+   {
+    "label": "Marquage, broderie et stickers",
+    "amount": 1000,
+    "detail": "Drapeaux parternaires / Stickers sur voiles / Marquage sur coque / Flocage vestes / Broderie polaires"
+   },
+   {
+    "label": "Assurance",
+    "amount": 1000,
+    "detail": "Assurance (100 €), Rachat de caution (400 €) et Imprévus (500 €)"
+   },
+   {
+    "label": "Licences FFV",
+    "amount": 949,
+    "detail": "13 licences de la Fédération Française de Voile (73 € l'unité)"
+   }
+  ],
+  "equiv": [
+   {
+    "amount": 73,
+    "label": "une licence FFV"
+   },
+   {
+    "amount": 200,
+    "label": "une veste de quart floquée"
+   },
+   {
+    "amount": 260,
+    "label": "l'inscription d'un équipier en régate"
+   },
+   {
+    "amount": 600,
+    "label": "un week-end d'entraînement en mer"
+   },
+   {
+    "amount": 3000,
+    "label": "la location du voilier OSIRIS d'environ 35 pieds"
+   }
+  ]
+ },
+ "sponsors": [
+  {
+   "name": "Les Toits du Nord",
+   "year": 2026,
+   "url": "",
+   "domain": "",
+   "logo": ""
+  },
+  {
+   "name": "Aires d'entreprises",
+   "year": 2026,
+   "url": "",
+   "domain": "",
+   "logo": ""
+  },
+  {
+   "name": "Deloitte",
+   "year": 2026,
+   "url": "https://www.deloitte.com/fr/fr.html",
+   "domain": "deloitte.com",
+   "logo": ""
+  }
+ ],
+ "social": {
+  "instagramUrl": "https://www.instagram.com/icam_voile/",
+  "followers": 1400,
+  "goal": 2000,
+  "linkedin": 500
+ },
+ "tiers": [
+  {
+   "id": "Matelot",
+   "price": 500
+  },
+  {
+   "id": "Équipier",
+   "price": 1000
+  },
+  {
+   "id": "Barreur",
+   "price": 3000
+  },
+  {
+   "id": "Skipper",
+   "price": 6000,
+   "limited": true
+  },
+  {
+   "id": "Amiral",
+   "price": 10000,
+   "plus": true,
+   "limited": true
+  }
+ ],
+ "perks": [
+  [
+   "Photos, vidéos HD (caméra + drone) de la course (mise en valeur de votre logo)",
+   1,
+   1,
+   1,
+   "oui + montages sur demande",
+   "oui + montages sur demande"
+  ],
+  [
+   "Logo sur le drapeau partenaires",
+   "Petit",
+   "Moyen",
+   "Grand",
+   "Grand",
+   "Grand, Principal"
+  ],
+  [
+   "Remerciements sur Instagram et LinkedIn",
+   "Collectifs",
+   "Collectifs",
+   "Dédiés",
+   "Dédiés",
+   "Dédiés, selon vos envies"
+  ],
+  [
+   "Diffusion de vos offres de stage et d'emploi aux élèves de l'Icam",
+   0,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   "Logo sur les vestes de quart de l'équipage",
+   0,
+   "Petit",
+   "Moyen",
+   "Moyen",
+   "Grand, Principal"
+  ],
+  [
+   "Vlogs et stories spécialisés pendant la course (placement de produit)",
+   0,
+   0,
+   1,
+   1,
+   1
+  ],
+  [
+   "Intervention de l'équipage dans votre entreprise auprès de vos collaborateurs",
+   0,
+   0,
+   0,
+   1,
+   1
+  ],
+  [
+   "Logo sur la coque -->voir simulateur en dessous",
+   0,
+   0,
+   0,
+   1,
+   1
+  ],
+  [
+   "Logo sur une voile (grand-voile, genois ou spinnaker) --> voir simulateur en dessous.",
+   0,
+   0,
+   0,
+   0,
+   1
+  ],
+  [
+   "Intervention de votre entreprise à l'ICAM",
+   0,
+   0,
+   0,
+   0,
+   1
+  ],
+  [
+   "Visite du bateau ou sortie en mer pour vos collaborateurs (à convenir ensemble)",
+   0,
+   0,
+   0,
+   0,
+   1
+  ]
+ ],
+ "sim": {
+  "surfaces": {
+   "main": {
+    "enabled": true,
+    "checked": true,
+    "scale": 90,
+    "label": "Grand-voile"
+   },
+   "spin": {
+    "enabled": true,
+    "checked": true,
+    "scale": 92,
+    "label": "Spinnaker"
+   },
+   "hull": {
+    "enabled": true,
+    "checked": true,
+    "scale": 94,
+    "label": "Coque"
+   }
+  },
+  "watermark": {
+   "enabled": true,
+   "opacity": 90,
+   "size": 13
+  },
+  "demoText": "VOTRE LOGO",
+  "demoLogo": ""
+ },
+ "youtube": "BNgGzrUfmxU",
+ "hidden": [],
+ "texts": {},
+ "images": {}
+}

@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Administration | Icam Voile Lille</title>
+<style>
+:root{--abyss:#0b2a45;--navy:#175082;--signal:#ff7a2f;--foam:#eef4f8;--ink:#0f2c47;--muted:#4f6b84;--line:#d3e0ea;--ok:#1b7a43;--err:#b3261e}
+*{box-sizing:border-box}body{margin:0;background:var(--foam);color:var(--ink);font:400 15px/1.5 "Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+h1,h2,h3{margin:0;line-height:1.15}h2{font-size:22px;margin-bottom:6px}h3{font-size:16px}
+button,input,select,textarea{font:inherit;color:inherit}
+input,select,textarea{width:100%;padding:8px 10px;border:1.5px solid var(--line);border-radius:6px;background:#fff}
+textarea{resize:vertical;min-height:64px}
+input:focus,select:focus,textarea:focus,button:focus-visible{outline:3px solid var(--signal);outline-offset:1px}
+label{display:grid;gap:4px;font-size:13px;font-weight:600;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;gap:6px;border:0;border-radius:6px;padding:9px 14px;font-weight:600;cursor:pointer;background:var(--signal);color:var(--abyss)}
+.btn.sec{background:#fff;color:var(--navy);box-shadow:inset 0 0 0 1.5px var(--line)}
+.btn.dang{background:#fff;color:var(--err);box-shadow:inset 0 0 0 1.5px #f1c9c5}
+.btn.sm{padding:6px 10px;font-size:13px}
+.btn[disabled]{opacity:.5;cursor:not-allowed}
+.login{min-height:100vh;display:grid;place-items:center;padding:20px}
+.login form{background:#fff;border-radius:12px;padding:30px;width:min(380px,100%);display:grid;gap:14px;border:1px solid var(--line)}
+.login img{width:72px;height:72px;border-radius:50%;justify-self:center}
+.err{color:var(--err);font-weight:600;font-size:14px;min-height:20px;margin:0}
+header{background:var(--abyss);color:#fff;position:sticky;top:0;z-index:5}
+header .w{display:flex;align-items:center;gap:16px;height:60px}
+header img{width:38px;height:38px;border-radius:50%;background:#fff}
+header b{font-size:17px}header .sp{flex:1}
+header a{color:#c9d8e6;font-size:14px}
+.w{max-width:1180px;margin:0 auto;padding:0 20px}
+nav.tabs{display:flex;gap:4px;overflow-x:auto;border-bottom:1px solid var(--line);background:#fff}
+nav.tabs button{border:0;background:none;padding:14px 16px;font-weight:600;color:var(--muted);cursor:pointer;border-bottom:3px solid transparent;white-space:nowrap}
+nav.tabs button[aria-selected="true"]{color:var(--navy);border-bottom-color:var(--signal)}
+main{padding:24px 0 120px}
+.panel{display:none}.panel.on{display:block}
+.intro{color:var(--muted);margin:0 0 18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:16px;margin-bottom:12px}
+.member{display:grid;grid-template-columns:96px 1fr;gap:16px}
+.photo{display:grid;gap:6px;justify-items:center}
+.photo .av{width:84px;height:84px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:700;font-size:24px;overflow:hidden}
+.photo .av img{width:100%;height:100%;object-fit:cover}
+.grid{display:grid;gap:10px}.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:2fr 1fr 3fr auto}
+@media(max-width:760px){.g2,.g3,.g4,.member{grid-template-columns:1fr}}
+.tools{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+.savebar{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--line);padding:12px 0;z-index:5}
+.savebar .w{display:flex;align-items:center;gap:14px}
+.savebar .st{color:var(--muted);font-size:14px;flex:1}
+.savebar .st.dirty{color:var(--signal);font-weight:600}
+.tot{display:flex;gap:28px;flex-wrap:wrap;margin:6px 0 18px;font-variant-numeric:tabular-nums}
+.tot b{display:block;font-size:24px}.tot span{font-size:13px;color:var(--muted)}
+.sp-logo{height:56px;display:flex;align-items:center;justify-content:center;background:var(--foam);border-radius:6px;padding:6px}
+.sp-logo img{max-height:44px;max-width:100%}
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:10px;overflow:hidden;border:1px solid var(--line)}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top;font-size:14px}
+th{background:var(--foam);font-size:13px;color:var(--muted)}
+tr.lead{cursor:pointer}tr.lead:hover td{background:#f7fafc}
+.pill{display:inline-block;border-radius:99px;padding:2px 9px;font-size:12px;font-weight:600;background:var(--foam);color:var(--navy)}
+.pill.nouveau{background:#fff1e6;color:#b4520f}.pill.signé{background:#e5f4ea;color:var(--ok)}.pill.refusé{background:#f6e3e1;color:var(--err)}
+.detail{background:var(--foam);padding:16px}
+.hist{font-size:13px;color:var(--muted);margin:8px 0 0;padding-left:18px}
+.hist .ko{color:var(--err)}
+.notice{border-radius:8px;padding:12px 14px;margin-bottom:16px;font-size:14px}
+.notice.warn{background:#fff7e0;color:#6b4e00}.notice.ok{background:#e5f4ea;color:var(--ok)}
+.toast{position:fixed;right:20px;bottom:80px;background:var(--abyss);color:#fff;padding:12px 16px;border-radius:8px;font-size:14px;z-index:9;opacity:0;transform:translateY(8px);transition:.2s}
+.toast.show{opacity:1;transform:none}.toast.bad{background:var(--err)}
+.hidden{display:none!important}
+.vbar{display:flex;flex-wrap:wrap;gap:6px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px;position:sticky;top:60px;z-index:4}
+.vbar .sp{flex:1}.vbar .on{box-shadow:inset 0 0 0 2px var(--navy)}
+.vwrap{background:#c9d6e2;border-radius:10px;padding:10px;display:flex;justify-content:center}
+#vframe{width:100%;height:calc(100vh - 230px);min-height:520px;border:0;border-radius:6px;background:#fff;transition:width .2s}
+.modal{position:fixed;inset:0;background:rgba(11,42,69,.6);display:grid;place-items:center;z-index:20;padding:16px}.modal[hidden]{display:none}
+.mbox{background:#fff;border-radius:12px;padding:20px;width:min(420px,100%)}#cropCv{width:100%;aspect-ratio:1;border-radius:8px;cursor:grab;touch-action:none;background:#eee}
+.chk{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--ink);font-weight:500}.chk input{width:auto}
+</style>
+</head>
+<body>
+
+<section class="login" id="login">
+  <form id="loginForm">
+    <img src="/assets/img/logo.webp" alt="Icam Voile Lille">
+    <h1 style="font-size:22px;text-align:center">Administration</h1>
+    <label>Mot de passe<input type="password" id="pw" autocomplete="current-password" required autofocus></label>
+    <button class="btn" type="submit" style="justify-content:center">Se connecter</button>
+    <p class="err" id="loginErr" role="alert"></p>
+  </form>
+</section>
+
+<div id="app" class="hidden">
+  <header><div class="w"><img src="/assets/img/logo.webp" alt=""><b>Icam Voile Lille, administration</b><span class="sp"></span><a href="/" target="_blank" rel="noopener">Voir le site</a><button class="btn sec sm" id="logout">Se déconnecter</button></div></header>
+  <nav class="tabs" role="tablist"><div class="w" style="display:flex;gap:4px">
+    <button role="tab" data-tab="visual" aria-selected="true">Éditer le site</button>
+    <button role="tab" data-tab="team" aria-selected="false">Équipe</button>
+    <button role="tab" data-tab="budget" aria-selected="false">Budget</button>
+    <button role="tab" data-tab="sponsors" aria-selected="false">Sponsors</button>
+    <button role="tab" data-tab="social" aria-selected="false">Réseaux</button>
+    <button role="tab" data-tab="texts" aria-selected="false">Textes</button>
+    <button role="tab" data-tab="images" aria-selected="false">Images</button>
+    <button role="tab" data-tab="tiers" aria-selected="false">Formules</button>
+    <button role="tab" data-tab="sim" aria-selected="false">Vidéo et logos</button>
+    <button role="tab" data-tab="sections" aria-selected="false">Sections</button>
+    <button role="tab" data-tab="leads" aria-selected="false">Demandes</button>
+    <button role="tab" data-tab="mail" aria-selected="false">E-mails</button>
+  </div></nav>
+  <main class="w">
+    <section class="panel on" id="p-visual"><h2>Éditer le site</h2>
+      <div class="vbar"><button class="btn sec sm" id="vBold"><b>Gras</b></button><button class="btn sec sm" id="vItal"><i>Italique</i></button><button class="btn sec sm" id="vLink">Ajouter un lien</button><button class="btn sec sm" id="vUnlink">Retirer le lien</button><button class="btn sec sm" id="vReset">Rétablir le texte d'origine</button>
+        <span class="sp"></span><button class="btn sec sm on" data-vw="100%">Ordinateur</button><button class="btn sec sm" data-vw="400px">Mobile</button><button class="btn sec sm" id="vReload">Recharger</button></div>
+      <p class="intro" id="vstate" style="margin:8px 0"></p>
+      <div class="vwrap"><iframe id="vframe" title="Aperçu modifiable du site"></iframe></div>
+      <div class="tools" id="vRemoved" style="margin-top:10px;align-items:center"></div></section>
+    <section class="panel" id="p-team"><h2>Équipe</h2><p class="intro">Nom, rôle, pôle, infos affichées au survol et photo de chaque membre (cochez « Responsable de pôle » pour le mettre en avant). L'ordre ici est l'ordre d'affichage sur le site.</p><div class="tools" style="margin:0 0 14px"><button class="btn" id="addMemberTop">+ Ajouter un membre</button><span class="intro" id="teamCount" style="margin:0;align-self:center"></span></div><div id="teamList"></div><button class="btn" id="addMember">+ Ajouter un membre</button></section>
+    <section class="panel" id="p-texts"><h2>Textes du site</h2><p class="intro">Tous les titres, paragraphes et boutons du site. Modifiez puis cliquez sur « Publier ». Pour mettre en gras : **mot**. Pour aller à la ligne : Entrée.</p>
+      <input id="txtSearch" placeholder="Rechercher un texte..." style="max-width:420px;margin-bottom:14px"><div id="txtList"></div></section>
+    <section class="panel" id="p-images"><h2>Images du site</h2><p class="intro">Remplacez n'importe quelle photo du site (format paysage conseillé, 1 600 px de large maximum).</p><div id="imgList" class="grid g3"></div></section>
+    <section class="panel" id="p-tiers"><h2>Formules de partenariat</h2><p class="intro">Nom, prix et contreparties de chaque formule. Dans le tableau : « oui », « non » ou un texte court (ex. « XL »).</p>
+      <div id="tierList"></div><div class="tools" style="margin-bottom:22px"><button class="btn sec" id="addTier">+ Ajouter une formule</button></div>
+      <h3 style="margin-bottom:8px">Contreparties</h3><div style="overflow-x:auto"><table id="perkTable"></table></div><div class="tools"><button class="btn sec" id="addPerk">+ Ajouter une contrepartie</button></div></section>
+    <section class="panel" id="p-sim"><h2>Vidéo du J80 et logos</h2><p class="intro">Réglez les emplacements proposés aux entreprises sur la vidéo, la taille du logo sur chaque surface et le filigrane Icam Voile.</p>
+      <div id="simSurf"></div>
+      <div class="card grid g3"><label class="chk"><input type="checkbox" id="wmOn">Afficher le logo Icam Voile en bas à droite (anti-copie)</label><label>Opacité du filigrane (%)<input type="number" min="30" max="100" id="wmOp"></label><label>Taille du filigrane (% de la hauteur)<input type="number" min="6" max="25" id="wmSize"></label></div>
+      <div class="card grid g2"><label>Texte affiché avant qu'une entreprise saisisse son logo<input id="demoText"></label><div><span style="font-size:13px;font-weight:600;color:var(--muted)">Ou logo de démonstration</span><div class="tools" id="demoLogoBox"></div></div></div></section>
+    <section class="panel" id="p-sections"><h2>Sections et vidéo YouTube</h2><p class="intro">Masquez une section sans la supprimer, et changez la vidéo YouTube.</p><div class="card grid g3" id="secList"></div>
+      <div class="card"><label>Vidéo YouTube (lien ou identifiant)<input id="ytId" placeholder="https://www.youtube.com/watch?v=..."></label></div></section>
+    <section class="panel" id="p-budget"><h2>Budget prévisionnel</h2><p class="intro">Les postes s'affichent dans cet ordre, avec les barres proportionnelles aux montants.</p>
+      <div class="tot" id="budgetTot"></div>
+      <div class="card"><label style="max-width:260px">Déjà financé (€)<input type="number" min="0" step="10" id="already"></label></div>
+      <h3 style="margin:18px 0 8px">Postes de dépenses</h3><div id="lineList"></div><button class="btn sec" id="addLine">Ajouter un poste</button>
+      <h3 style="margin:26px 0 8px">« Votre soutien, concrètement »</h3><div id="equivList"></div><button class="btn sec" id="addEquiv">Ajouter un exemple</button></section>
+    <section class="panel" id="p-sponsors"><h2>Sponsors</h2><p class="intro">Le logo est récupéré automatiquement à partir du nom de domaine. Importez un fichier si le résultat ne convient pas.</p><div id="spList"></div><button class="btn sec" id="addSp">Ajouter un sponsor</button></section>
+    <section class="panel" id="p-social"><h2>Réseaux sociaux</h2><p class="intro">Ces chiffres alimentent le compteur animé du site. Mettez-les à jour régulièrement.</p>
+      <div class="card grid g2">
+        <label>Lien du compte Instagram<input id="igUrl" type="url" placeholder="https://www.instagram.com/..."></label>
+        <label>Abonnés Instagram<input id="igF" type="number" min="0"></label>
+        <label>Objectif d'abonnés avant la course<input id="igG" type="number" min="0"></label>
+        <label>Relations LinkedIn<input id="li" type="number" min="0"></label>
+      </div></section>
+    <section class="panel" id="p-leads"><h2>Demandes de partenariat</h2><p class="intro">Toutes les demandes envoyées depuis le formulaire du site. Cliquez sur une ligne pour la traiter et répondre.</p>
+      <div class="tools" style="margin:0 0 12px"><button class="btn sec sm" id="reloadLeads">Actualiser</button><button class="btn sec sm" id="csv">Exporter en CSV</button>
+        <select id="leadFilter" style="width:auto"><option value="">Tous les statuts</option><option>nouveau</option><option>contacté</option><option>rendez-vous</option><option>signé</option><option>refusé</option></select></div>
+      <div id="leadsBox"></div></section>
+    <section class="panel" id="p-mail"><h2>E-mails</h2><div id="mailStatus"></div>
+      <div class="card grid">
+        <h3>Envoi par votre script Google (comme la première version du site)</h3>
+        <label class="chk"><input type="checkbox" id="fwdG">Transmettre chaque demande au script Google, qui envoie les e-mails depuis votre compte Google</label>
+        <label>Lien du script Google (Apps Script, se termine par /exec)<input id="gUrl"></label>
+        <div class="grid g2"><label>Adresse pour tester<input id="gTestTo" type="email" placeholder="votre@adresse.fr"></label><div style="align-self:end"><button class="btn sec" id="gTest">Envoyer une demande de test</button></div></div>
+      </div>
+      <div class="card grid">
+        <h3>Envoi par Resend (optionnel, utilisé seulement si le script Google échoue)</h3>
+        <label>Adresses qui reçoivent chaque nouvelle demande (séparées par des virgules)<input id="notifyTo"></label>
+        <label class="chk"><input type="checkbox" id="sendConf">Envoyer automatiquement un accusé de réception au prospect</label>
+        <label>Objet de l'accusé de réception<input id="confSub"></label>
+        <label>Message de l'accusé de réception<textarea id="confBody" rows="6"></textarea></label>
+        <p class="intro" style="margin:0">Variables disponibles : {{prenom}}, {{nom}}, {{entreprise}}.</p>
+      </div>
+      <h3 style="margin:18px 0 8px">Modèles de réponse</h3><div id="tplList"></div><button class="btn sec" id="addTpl">Ajouter un modèle</button>
+      <div class="tools" style="margin-top:16px"><button class="btn" id="saveMail">Enregistrer les réglages e-mail</button></div>
+      <div class="card" style="margin-top:22px"><h3>Envoyer un e-mail de test</h3><div class="grid g2" style="margin-top:10px"><label>Destinataire<input id="testTo" type="email"></label><div style="align-self:end"><button class="btn sec" id="testSend">Envoyer le test</button></div></div></div>
+    </section>
+  </main>
+  <div class="savebar"><div class="w"><span class="st" id="saveState">Aucune modification.</span><button class="btn" id="saveContent">Publier les modifications</button></div></div>
+</div>
+<div class="modal" id="cropModal" hidden><div class="mbox"><h3>Recadrer la photo</h3><p class="intro" style="margin:4px 0 10px">Faites glisser la photo pour la placer, zoomez avec le curseur ou la molette.</p>
+  <canvas id="cropCv" width="360" height="360"></canvas><label style="margin-top:10px">Zoom<input type="range" id="cropZoom" min="1" max="4" step="0.01" value="1"></label>
+  <div class="tools" style="justify-content:flex-end"><button class="btn sec" id="cropCancel">Annuler</button><button class="btn" id="cropOk">Valider</button></div></div></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+"use strict";
+var PAGE=null,DEF=null;var TOKEN=sessionStorage.getItem("icv_admin")||"",C=null,DIRTY=false,SETTINGS=null,LEADS=[],TEAMS=["Bureau","J80","Habitable","Équipe Terre"];
+var $=function(s,r){return(r||document).querySelector(s)};
+function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+function toast(t,bad){var e=$("#toast");e.textContent=t;e.className="toast show"+(bad?" bad":"");clearTimeout(toast.t);toast.t=setTimeout(function(){e.className="toast"},3200)}
+function api(path,opt){opt=opt||{};opt.headers=Object.assign({"Content-Type":"application/json"},opt.headers||{},TOKEN?{Authorization:"Bearer "+TOKEN}:{});
+  return fetch(path,opt).then(function(r){return r.json().catch(function(){return{}}).then(function(j){if(r.status===401&&path!=="/api/admin/login"){logout("Session expirée. Reconnectez-vous.");throw new Error("401")}if(!r.ok)throw new Error(j.error||("Erreur "+r.status));return j})})}
+function dirty(v){DIRTY=v!==false;var s=$("#saveState");s.textContent=DIRTY?"Modifications non publiées.":"Tout est publié.";s.className="st"+(DIRTY?" dirty":"")}
+window.addEventListener("beforeunload",function(e){if(DIRTY){e.preventDefault();e.returnValue=""}});
+function eur(n){return(Math.round(+n||0)).toLocaleString("fr-FR")+" €"}
+
+/* --- Connexion --- */
+$("#loginForm").addEventListener("submit",function(e){e.preventDefault();var b=e.target.querySelector("button");b.disabled=true;$("#loginErr").textContent="";
+  api("/api/admin/login",{method:"POST",body:JSON.stringify({password:$("#pw").value})}).then(function(j){TOKEN=j.token;sessionStorage.setItem("icv_admin",TOKEN);$("#pw").value="";start()})
+  .catch(function(err){$("#loginErr").textContent=err.message==="Failed to fetch"?"Serveur injoignable. Le site doit être déployé sur Netlify avec ses fonctions.":err.message}).then(function(){b.disabled=false})});
+function logout(msg){TOKEN="";sessionStorage.removeItem("icv_admin");$("#app").classList.add("hidden");$("#login").classList.remove("hidden");$("#loginErr").textContent=msg||""}
+$("#logout").onclick=function(){if(DIRTY&&!confirm("Des modifications ne sont pas publiées. Se déconnecter quand même ?"))return;DIRTY=false;logout()};
+
+function start(){$("#login").classList.add("hidden");$("#app").classList.remove("hidden");
+  Promise.all([fetch("/index.html",{cache:"no-store"}).then(function(r){return r.text()}).then(function(h){PAGE=new DOMParser().parseFromString(h,"text/html")}).catch(function(){}),fetch("/api/content",{cache:"no-store"}).then(function(r){return r.ok?r.json():null}).catch(function(){return null}),fetch("/assets/content-default.json").then(function(r){return r.json()})])
+  .then(function(x){x=x.slice(1);var d=x[1];setTimeout(loadVisual,0);C=x[0]&&Array.isArray(x[0].team)?x[0]:d;C.budget=C.budget||d.budget;C.sponsors=C.sponsors||d.sponsors;C.social=Object.assign({},d.social,C.social||{});DEF=d;
+    ["tiers","perks","sim","youtube"].forEach(function(k){if(C[k]==null)C[k]=JSON.parse(JSON.stringify(d[k]))});C.removed=C.removed||[];C.dups=C.dups||[];C.texts=C.texts||{};C.images=C.images||{};C.hidden=C.hidden||[];
+    C.sim.surfaces=Object.assign({},d.sim.surfaces,C.sim.surfaces||{});C.sim.watermark=Object.assign({},d.sim.watermark,C.sim.watermark||{});renderAll();dirty(false)});
+  loadSettings();loadLeads()}
+
+/* --- Onglets --- */
+document.querySelectorAll("[data-tab]").forEach(function(b){b.onclick=function(){document.querySelectorAll("[data-tab]").forEach(function(x){x.setAttribute("aria-selected",x===b)});
+  document.querySelectorAll(".panel").forEach(function(p){p.classList.toggle("on",p.id==="p-"+b.dataset.tab)});$(".savebar").classList.toggle("hidden",b.dataset.tab==="leads"||b.dataset.tab==="mail");if(b.dataset.tab==="texts")renderTexts();if(b.dataset.tab==="visual"&&VW)previewC()}});
+
+/* --- Utilitaires de listes --- */
+function move(arr,i,d){var j=i+d;if(j<0||j>=arr.length)return;var t=arr[i];arr[i]=arr[j];arr[j]=t;dirty();renderAll()}
+function bind(el,obj,key,num){el.value=obj[key]==null?"":obj[key];el.addEventListener("input",function(){obj[key]=num?(el.value===""?0:+el.value):el.value;dirty();if(num)renderTotals()})}
+function tools(arr,i){var d=document.createElement("div");d.className="tools";
+  d.innerHTML='<button class="btn sec sm" data-a="up">Monter</button><button class="btn sec sm" data-a="down">Descendre</button><button class="btn dang sm" data-a="del">Supprimer</button>';
+  d.addEventListener("click",function(e){var a=e.target.dataset.a;if(a==="up")move(arr,i,-1);if(a==="down")move(arr,i,1);if(a==="del"&&confirm("Supprimer cet élément ?")){arr.splice(i,1);dirty();renderAll()}});return d}
+
+/* Compression d'image puis envoi */
+function uploadImage(file,maxSide){return new Promise(function(res,rej){
+  if(!/^image\/(png|jpe?g|webp|svg\+xml)$/.test(file.type))return rej(new Error("Format accepté : PNG, JPG, WebP ou SVG."));
+  var send=function(dataUrl){api("/api/admin/media",{method:"POST",body:JSON.stringify({dataUrl:dataUrl})}).then(function(j){res(j.url)}).catch(rej)};
+  var fr=new FileReader();fr.onload=function(){if(file.type==="image/svg+xml"){if(file.size>1.5e6)return rej(new Error("SVG trop lourd."));return send(fr.result)}
+    var im=new Image();im.onload=function(){var k=Math.min(1,maxSide/Math.max(im.width,im.height)),c=document.createElement("canvas");c.width=Math.round(im.width*k);c.height=Math.round(im.height*k);
+      c.getContext("2d").drawImage(im,0,0,c.width,c.height);send(file.type==="image/png"?c.toDataURL("image/png"):c.toDataURL("image/jpeg",.86))};im.onerror=function(){rej(new Error("Image illisible."))};im.src=fr.result};
+  fr.readAsDataURL(file)})}
+function fileButton(label,onfile){var l=document.createElement("label");l.className="btn sec sm";l.style.cursor="pointer";l.innerHTML=esc(label)+'<input type="file" accept="image/png,image/jpeg,image/webp,image/svg+xml" style="display:none">';
+  l.querySelector("input").addEventListener("change",function(){var f=this.files[0];this.value="";if(f)onfile(f)});return l}
+
+/* --- Equipe --- */
+function renderTeam(){var box=$("#teamList");box.innerHTML="";C.team.forEach(function(m,i){
+  var c=document.createElement("div");c.className="card member";
+  var ini=((m.prenom||"").charAt(0)+(m.nom||"").charAt(0)).toUpperCase()||"?";
+  c.innerHTML='<div class="photo"><div class="av">'+(m.photo?'<img src="'+esc(m.photo)+'" alt="">':esc(ini))+'</div></div><div><div class="grid g3"><label>Prénom<input data-k="prenom"></label><label>Nom<input data-k="nom"></label><label>Rôle dans l\'association<input data-k="role"></label></div>'+
+    '<div class="grid g3" style="margin-top:10px"><label>Pôle<input data-k="team" list="poles"></label><label>Promotion<input data-k="promo"></label><label>Niveau de voile<input data-k="voile"></label></div>'+
+    '<div class="grid g3" style="margin-top:10px"><label>Qualité / compétence<input data-k="qualite"></label><label>Défi sportif le plus fou<input data-k="defi"></label><label><span>Responsable de pôle</span><input type="checkbox" data-lead style="width:auto"></label></div><datalist id="poles">'+["Bureau","CCE","Com","Évent interne","Évent externe"].concat(C.team.map(function(x){return x.team})).filter(function(v,i,r){return v&&r.indexOf(v)===i}).map(function(v){return'<option value="'+esc(v)+'">'}).join("")+'</datalist></div>';
+  c.querySelectorAll("[data-k]").forEach(function(el){bind(el,m,el.dataset.k)});var lk=c.querySelector("[data-lead]");lk.checked=!!m.lead;lk.onchange=function(){m.lead=lk.checked;dirty()};
+  var ph=c.querySelector(".photo");ph.appendChild(fileButton(m.photo?"Changer la photo":"Ajouter une photo",function(f){photoFlow(m,f)}));
+  if(m.photo){var rc=document.createElement("button");rc.className="btn sec sm";rc.textContent="Recadrer / zoomer";rc.onclick=function(){cropImage(m.photoOrig||m.photo,function(u){m.photo=u;dirty();renderTeam();toast("Photo recadrée. Pensez à publier.")})};ph.appendChild(rc)}
+  if(m.photo){var rm=document.createElement("button");rm.className="btn dang sm";rm.textContent="Retirer";rm.onclick=function(){m.photo="";m.photoOrig="";dirty();renderTeam()};ph.appendChild(rm)}
+  var tl=tools(C.team,i);tl.querySelector('[data-a="del"]').textContent="Supprimer ce membre";c.children[1].appendChild(tl);box.appendChild(c)});$("#teamCount").textContent=C.team.length+" membres"}
+function addMember(){C.team.push({prenom:"",nom:"",role:"",team:"",promo:"",voile:"",qualite:"",defi:"",lead:false,photo:""});dirty();renderTeam();var l=$("#teamList").lastElementChild;if(l){l.scrollIntoView({behavior:"smooth",block:"center"});l.querySelector("input").focus()}}
+$("#addMember").onclick=addMember;$("#addMemberTop").onclick=addMember;
+
+/* --- Budget --- */
+function renderTotals(){var t=C.budget.lines.reduce(function(s,l){return s+(+l.amount||0)},0),a=+C.budget.already||0;
+  $("#budgetTot").innerHTML='<div><b>'+eur(t)+'</b><span>budget total</span></div><div><b>'+eur(a)+'</b><span>déjà financé</span></div><div><b style="color:#b4520f">'+eur(Math.max(0,t-a))+'</b><span>à financer</span></div>'}
+function renderBudget(){bind($("#already"),C.budget,"already",true);var box=$("#lineList");box.innerHTML="";
+  C.budget.lines.forEach(function(l,i){var c=document.createElement("div");c.className="card";c.innerHTML='<div class="grid g4"><label>Poste<input data-k="label"></label><label>Montant (€)<input type="number" min="0" step="10" data-k="amount"></label><label>Détail<input data-k="detail"></label></div>';
+    c.querySelectorAll("[data-k]").forEach(function(el){bind(el,l,el.dataset.k,el.dataset.k==="amount")});c.appendChild(tools(C.budget.lines,i));box.appendChild(c)});
+  var eb=$("#equivList");eb.innerHTML="";(C.budget.equiv=C.budget.equiv||[]).forEach(function(e,i){var c=document.createElement("div");c.className="card";c.innerHTML='<div class="grid g4"><label>Montant (€)<input type="number" min="0" data-k="amount"></label><label style="grid-column:span 2">Ce que finance ce montant<input data-k="label"></label></div>';
+    c.querySelectorAll("[data-k]").forEach(function(el){bind(el,e,el.dataset.k,el.dataset.k==="amount")});c.appendChild(tools(C.budget.equiv,i));eb.appendChild(c)});renderTotals()}
+$("#addLine").onclick=function(){C.budget.lines.push({label:"",amount:0,detail:""});dirty();renderBudget()};
+$("#addEquiv").onclick=function(){C.budget.equiv.push({amount:0,label:""});dirty();renderBudget()};
+$("#already").addEventListener("input",renderTotals);
+
+/* --- Sponsors --- */
+function renderSponsors(){var box=$("#spList");box.innerHTML="";C.sponsors.forEach(function(s,i){var c=document.createElement("div");c.className="card";
+  var src=s.logo||(s.domain?"/api/logo?domain="+encodeURIComponent(s.domain):"");
+  c.innerHTML='<div class="grid" style="grid-template-columns:160px 1fr;gap:16px"><div><div class="sp-logo">'+(src?'<img src="'+esc(src)+'" alt="">':'<span style="color:var(--muted);font-size:13px">Pas de logo</span>')+'</div></div><div class="grid g2"><label>Nom<input data-k="name"></label><label>Année du partenariat<input type="number" data-k="year"></label><label>Site (lien affiché)<input data-k="url" placeholder="https://..."></label><label>Nom de domaine pour le logo<input data-k="domain" placeholder="entreprise.fr"></label></div></div>';
+  c.querySelectorAll("[data-k]").forEach(function(el){bind(el,s,el.dataset.k,el.dataset.k==="year");if(el.dataset.k==="domain")el.addEventListener("change",function(){renderSponsors()})});
+  var t=tools(C.sponsors,i);t.prepend(fileButton(s.logo?"Changer le logo":"Importer un logo",function(f){toast("Envoi du logo...");uploadImage(f,800).then(function(u){s.logo=u;dirty();renderSponsors();toast("Logo ajouté. Pensez à publier.")}).catch(function(e){toast(e.message,true)})}));
+  if(s.logo){var rm=document.createElement("button");rm.className="btn dang sm";rm.textContent="Revenir au logo automatique";rm.onclick=function(){s.logo="";dirty();renderSponsors()};t.prepend(rm)}
+  c.appendChild(t);box.appendChild(c)})}
+$("#addSp").onclick=function(){C.sponsors.push({name:"",year:new Date().getFullYear(),url:"",domain:"",logo:""});dirty();renderSponsors()};
+
+/* --- Reseaux --- */
+function renderSocial(){bind($("#igUrl"),C.social,"instagramUrl");bind($("#igF"),C.social,"followers",true);bind($("#igG"),C.social,"goal",true);bind($("#li"),C.social,"linkedin",true)}
+var socialBound=false;
+function renderAll(){if(VW)previewC();renderTeam();renderBudget();renderSponsors();if(!socialBound){renderSocial();socialBound=true}renderTexts();renderImages();renderTiers();renderSim();renderSections()}
+/* --- Éditeur visuel : le site dans l'admin, on clique sur un texte ou une image pour le modifier --- */
+var VF=null,VW=null,VDOC=null,DEFHTML={},DYN=[["#team","Équipe","team"],["#lines","Budget","budget"],["#equiv","Budget","budget"],["#logos","Sponsors","sponsors"],["#tiers","Formules","tiers"],[".followers","Réseaux","social"],[".goal","Réseaux","social"],["#sp-title","Sponsors","sponsors"]];
+function norm(h){return String(h||"").replace(/\s+/g," ").replace(/ ?<br ?\/?> ?/g,"<br>").trim()}
+function loadVisual(){var fr=$("#vframe");$("#vstate").textContent="Chargement du site...";
+  if(PAGE)PAGE.querySelectorAll("[data-edit]").forEach(function(el){DEFHTML[el.dataset.edit]=norm(el.innerHTML)});
+  fr.onload=function(){VW=fr.contentWindow;VDOC=fr.contentDocument;(VW.__icvReady||Promise.resolve()).then(function(){setTimeout(setupVisual,150)})};
+  fr.src="/?edition="+Date.now()}
+function previewC(){if(VW&&VW.__icv){VW.__icv.render(Object.assign({},C,{texts:C.texts,images:C.images,hidden:[]}));VDOC.querySelectorAll("[data-edit]:not([data-icvb])").length&&bindEditables()}}
+function setupVisual(){if(!VW||!VW.__icv){$("#vstate").textContent="Impossible de charger le site dans l'éditeur.";return}
+  previewC();
+  var st=VDOC.createElement("style");st.textContent="[data-edit]{outline:1px dashed rgba(255,122,47,.55);outline-offset:2px;cursor:text}[data-edit]:hover{outline:2px dashed #ff7a2f}[data-edit]:focus{outline:2px solid #ff7a2f;background:rgba(255,236,190,.35)}"+
+    "[data-img],[data-bg]{cursor:pointer}[data-img]:hover{outline:3px dashed #ff7a2f;outline-offset:-3px}.icv-dyn{position:relative;outline:2px dashed #2f7fff;outline-offset:4px}.icv-badge{position:absolute;z-index:40;top:-14px;right:0;background:#2f7fff;color:#fff;font:600 12px Arial;padding:4px 8px;border-radius:4px;cursor:pointer}"+
+    ".icv-sel{outline:3px solid #2f7fff!important;outline-offset:3px}.icv-tb{position:absolute;z-index:99;display:none;gap:4px;align-items:center;background:#0b2a45;padding:5px;border-radius:6px;box-shadow:0 6px 18px rgba(0,0,0,.25);font:600 12px Arial}.icv-tb .icv-name{color:#c9d8e6;padding:0 6px;max-width:260px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.icv-tb button{border:0;border-radius:4px;padding:6px 9px;background:#fff;color:#0b2a45;font:700 12px Arial;cursor:pointer}.icv-tb .icv-del{background:#ffdcd6;color:#9b1c10}"+
+    ".icv-hidden{opacity:.35}.icv-imgbtn{position:absolute;z-index:40;background:#ff7a2f;color:#0b2a45;font:700 12px Arial;padding:5px 9px;border-radius:4px;border:0;cursor:pointer}";VDOC.head.appendChild(st);
+  VDOC.addEventListener("click",function(e){var a=e.target.closest("a,button[type=submit]");if(a&&!e.target.closest(".icv-badge,.icv-imgbtn")){var inEdit=e.target.closest("[data-edit]");if(a.tagName==="A"||inEdit)e.preventDefault()}},true);
+  VDOC.addEventListener("submit",function(e){e.preventDefault()},true);
+  bindEditables();TB=null;
+  VDOC.addEventListener("click",function(e){if(e.target.closest(".icv-tb,.icv-badge,.icv-imgbtn"))return;var b=e.target.closest("[data-blk]");if(b)selectBlk(b);else hideTB()});
+  renderRemoved();
+  VDOC.querySelectorAll("[data-bg]").forEach(function(sec){var b=VDOC.createElement("button");b.className="icv-imgbtn";b.textContent="Changer l'image de fond";b.style.cssText="top:12px;left:12px";sec.style.position="relative";sec.appendChild(b);
+    b.onclick=function(e){e.preventDefault();e.stopPropagation();pickImage(sec.dataset.bg,function(u){sec.style.backgroundImage="url('"+u+"')"})}});
+  DYN.forEach(function(d){var el=VDOC.querySelector(d[0]);if(!el)return;var box=el.closest(".totals,.budget,.followers,.goal")||el;box.classList.add("icv-dyn");
+    var b=VDOC.createElement("span");b.className="icv-badge";b.textContent="Modifier dans l'onglet "+d[1];b.onclick=function(e){e.preventDefault();e.stopPropagation();openTab(d[2])};if(getComputedStyle(box).position==="static")box.style.position="relative";box.appendChild(b)});
+  $("#vstate").textContent="Cliquez sur un texte pour l'écrire, sur une photo pour la remplacer. Encadrés bleus : contenus gérés dans les autres onglets."}
+function pickImage(key,done){var inp=document.createElement("input");inp.type="file";inp.accept="image/png,image/jpeg,image/webp";inp.onchange=function(){var f=inp.files[0];if(!f)return;toast("Envoi de l'image...");
+  uploadImage(f,1600).then(function(u){C.images[key]=u;dirty();done(u);toast("Image remplacée. Pensez à publier.")}).catch(function(e){toast(e.message,true)})};inp.click()}
+function openTab(name){var b=document.querySelector('[data-tab="'+name+'"]');if(b)b.click()}
+$("#vBold").onclick=function(){if(VDOC){VDOC.execCommand("bold");}};
+$("#vItal").onclick=function(){if(VDOC){VDOC.execCommand("italic");}};
+$("#vLink").onclick=function(){if(!VDOC)return;var u=prompt("Adresse du lien (https://..., mailto:..., tel:...)");if(u)VDOC.execCommand("createLink",false,u)};
+$("#vUnlink").onclick=function(){if(VDOC)VDOC.execCommand("unlink")};
+$("#vReset").onclick=function(){if(!VDOC)return;var el=VDOC.activeElement&&VDOC.activeElement.closest&&VDOC.activeElement.closest("[data-edit]");if(!el){toast("Cliquez d'abord dans le texte à rétablir.",true);return}
+  var k=el.dataset.edit,o=PAGE&&PAGE.querySelector('[data-edit="'+k+'"]');delete C.texts[k];if(o)el.innerHTML=o.innerHTML;dirty();toast("Texte d'origine rétabli.")};
+$("#vReload").onclick=function(){loadVisual()};
+document.querySelectorAll("[data-vw]").forEach(function(b){b.onclick=function(){$("#vframe").style.width=b.dataset.vw;document.querySelectorAll("[data-vw]").forEach(function(x){x.classList.toggle("on",x===b)})}});
+
+/* --- Blocs : supprimer, dupliquer, rétablir --- */
+var CURBLK=null,TB=null;
+function blkLabel(el){var t=(el.textContent||"").replace(/\s+/g," ").trim();var n={LI:"Puce",ARTICLE:"Carte",DETAILS:"Définition",FIGURE:"Photo",P:"Paragraphe",H1:"Grand titre",H2:"Titre",H3:"Sous-titre",A:"Bouton",UL:"Liste",IMG:"Image"}[el.tagName]||"Bloc";return n+(t?" « "+t.slice(0,40)+(t.length>40?"…":"")+" »":"")}
+function ensureToolbar(){if(TB&&VDOC.body.contains(TB))return TB;TB=VDOC.createElement("div");TB.className="icv-tb";
+  TB.innerHTML='<span class="icv-name"></span><button data-a="up" title="Sélectionner le bloc qui contient celui-ci">Bloc parent</button><button data-a="dup">Dupliquer</button><button data-a="del" class="icv-del">Supprimer</button>';
+  TB.addEventListener("mousedown",function(e){e.preventDefault()});
+  TB.addEventListener("click",function(e){var a=e.target.dataset.a;if(!a||!CURBLK)return;e.preventDefault();e.stopPropagation();
+    if(a==="up"){var p=CURBLK.parentElement&&CURBLK.parentElement.closest("[data-blk]");if(p)selectBlk(p);else toast("Pas de bloc plus grand : utilisez l'onglet Sections.",true)}
+    if(a==="dup"){if(CURBLK.querySelector("[id]")||CURBLK.id){toast("Ce bloc ne peut pas être dupliqué.",true);return}
+      var id=Math.random().toString(36).slice(2,7),src=CURBLK.dataset.blk;C.dups=C.dups||[];C.dups.push({id:id,src:src.split("~")[0]===src?src:src,after:src});dirty();previewC();bindEditables();
+      var nc=VDOC.querySelector('[data-dup="'+id+'"]');if(nc){selectBlk(nc);nc.scrollIntoView({block:"center"})}toast("Bloc dupliqué : modifiez son texte.")}
+    if(a==="del"){var k=CURBLK.dataset.blk,dup=CURBLK.dataset.dup;
+      if(dup){C.dups=(C.dups||[]).filter(function(d){return d.id!==dup})}else{C.removed=C.removed||[];if(C.removed.indexOf(k)<0)C.removed.push(k)}
+      dirty();previewC();bindEditables();hideTB();renderRemoved();toast("Bloc supprimé. Vous pouvez le rétablir sous l'aperçu.")}});
+  VDOC.body.appendChild(TB);return TB}
+function hideTB(){if(TB)TB.style.display="none";if(CURBLK)CURBLK.classList.remove("icv-sel");CURBLK=null}
+function selectBlk(el){if(CURBLK)CURBLK.classList.remove("icv-sel");CURBLK=el;el.classList.add("icv-sel");var tb=ensureToolbar(),r=el.getBoundingClientRect();
+  tb.querySelector(".icv-name").textContent=blkLabel(el);tb.style.display="flex";tb.style.top=Math.max(0,r.top+VW.scrollY-40)+"px";tb.style.left=Math.max(4,r.left+VW.scrollX)+"px"}
+function bindEditables(){if(!VDOC)return;
+  VDOC.querySelectorAll("[data-edit]").forEach(function(el){if(el.dataset.icvb)return;el.dataset.icvb=1;el.contentEditable="true";el.spellcheck=true;
+    el.addEventListener("keydown",function(e){if(e.key==="Enter"){e.preventDefault();VDOC.execCommand("insertLineBreak")}});
+    el.addEventListener("input",function(){var k=el.dataset.edit,h=VW.__icv.sanitize(el.innerHTML).replace(/&nbsp;|\u00a0/g," ");if(norm(h)===DEFHTML[k])delete C.texts[k];else C.texts[k]=h;dirty();$("#vstate").textContent="Texte modifié : pensez à publier."});
+    el.addEventListener("paste",function(e){e.preventDefault();var t=(e.clipboardData||window.clipboardData).getData("text/plain");VDOC.execCommand("insertText",false,t)})});
+  VDOC.querySelectorAll("[data-img]").forEach(function(im){if(im.dataset.icvb)return;im.dataset.icvb=1;im.addEventListener("click",function(e){if(e.altKey)return;e.preventDefault();e.stopPropagation();selectBlk(im.closest("[data-blk]")||im);pickImage(im.dataset.img,function(u){im.src=u})})})}
+function renderRemoved(){var box=$("#vRemoved");if(!box)return;var R=C.removed||[];box.innerHTML=R.length?'<b>Blocs supprimés ('+R.length+') :</b> ':"";
+  R.forEach(function(k){var src=(VDOC&&VDOC.querySelector('[data-blk="'+k+'"]'))||(PAGE&&PAGE.querySelector('[data-blk="'+k+'"]'));var b=document.createElement("button");b.className="btn sec sm";b.textContent="Rétablir "+(src?blkLabel(src):k);
+    b.onclick=function(){C.removed=C.removed.filter(function(x){return x!==k});dirty();previewC();bindEditables();renderRemoved()};box.appendChild(b)})}
+
+/* --- Recadrage des photos de profil --- */
+function cropImage(src,done){var M=$("#cropModal"),cv=$("#cropCv"),g=cv.getContext("2d"),z=$("#cropZoom"),im=new Image(),S=360,st={x:0,y:0,s:1,base:1};
+  im.crossOrigin="anonymous";
+  im.onload=function(){st.base=Math.max(S/im.width,S/im.height);st.s=1;z.value=1;st.x=(S-im.width*st.base)/2;st.y=(S-im.height*st.base)/2;M.hidden=false;paint()};
+  im.onerror=function(){toast("Image illisible.",true)};im.src=src;
+  function sc(){return st.base*st.s}
+  function clamp(){var w=im.width*sc(),h=im.height*sc();st.x=Math.min(0,Math.max(S-w,st.x));st.y=Math.min(0,Math.max(S-h,st.y))}
+  function paint(){clamp();g.fillStyle="#fff";g.fillRect(0,0,S,S);g.drawImage(im,st.x,st.y,im.width*sc(),im.height*sc());
+    g.save();g.fillStyle="rgba(11,42,69,.55)";g.beginPath();g.rect(0,0,S,S);g.arc(S/2,S/2,S/2-4,0,Math.PI*2,true);g.fill("evenodd");g.restore()}
+  var drag=null;cv.onpointerdown=function(e){drag={x:e.clientX,y:e.clientY,ox:st.x,oy:st.y};cv.setPointerCapture(e.pointerId)};
+  cv.onpointermove=function(e){if(!drag)return;var k=S/cv.getBoundingClientRect().width;st.x=drag.ox+(e.clientX-drag.x)*k;st.y=drag.oy+(e.clientY-drag.y)*k;paint()};
+  cv.onpointerup=function(){drag=null};
+  z.oninput=function(){var cx=S/2,cy=S/2,old=sc();st.s=+z.value;var n=sc();st.x=cx-(cx-st.x)*n/old;st.y=cy-(cy-st.y)*n/old;paint()};
+  cv.onwheel=function(e){e.preventDefault();z.value=Math.min(4,Math.max(1,+z.value-e.deltaY*0.002));z.oninput()};
+  $("#cropCancel").onclick=function(){M.hidden=true};
+  $("#cropOk").onclick=function(){var o=document.createElement("canvas"),O=480;o.width=O;o.height=O;var k=O/S,og=o.getContext("2d");og.fillStyle="#fff";og.fillRect(0,0,O,O);og.drawImage(im,st.x*k,st.y*k,im.width*sc()*k,im.height*sc()*k);
+    M.hidden=true;toast("Envoi de la photo...");api("/api/admin/media",{method:"POST",body:JSON.stringify({dataUrl:o.toDataURL("image/jpeg",.88)})}).then(function(j){done(j.url)}).catch(function(e){toast(e.message,true)})}}
+function photoFlow(m,file){var fr=new FileReader();fr.onload=function(){toast("Préparation de la photo...");
+  uploadImage(file,1600).then(function(orig){m.photoOrig=orig;cropImage(orig,function(u){m.photo=u;dirty();renderTeam();toast("Photo enregistrée. Pensez à publier.")})}).catch(function(e){toast(e.message,true)})};fr.readAsDataURL(file)}
+
+/* --- Textes --- */
+var SECLAB={top:"En-tête (haut de page)",nav:"Menu",projet:"Projet",galerie:"Galerie",video:"Vidéo",equipe:"Équipe",budget:"Budget",offres:"Offres",
+  "formules-bloc":"Formules",mecenat:"Mécénat",simulateur:"Vidéo et logo",sponsors:"Sponsors",contact:"Contact",footer:"Pied de page",page:"Autres"};
+function htmlToText(h){var d=document.createElement("div");d.innerHTML=h;return toEditable(d)}
+function toEditable(el){var c=el.cloneNode(true);c.querySelectorAll("br").forEach(function(b){b.replaceWith("\n")});c.querySelectorAll("b,strong").forEach(function(b){b.replaceWith("**"+b.textContent+"**")});return c.textContent.replace(/[ \t]+\n/g,"\n").replace(/\s+$/,"").replace(/^\s+/,"")}
+function renderTexts(){var box=$("#txtList");if(!PAGE){box.innerHTML='<div class="card">Impossible de lire la page du site.</div>';return}
+  var q=($("#txtSearch").value||"").toLowerCase(),groups={},order=[];
+  PAGE.querySelectorAll("[data-edit]").forEach(function(el){var k=el.dataset.edit,sec=k.split(".")[0],def=toEditable(el),ov=C.texts[k],cur=ov!=null?(ov.indexOf("<")>=0?htmlToText(ov):ov):def,hasLink=!!el.querySelector("a");
+    if(q&&cur.toLowerCase().indexOf(q)<0&&def.toLowerCase().indexOf(q)<0)return;if(!groups[sec]){groups[sec]=[];order.push(sec)}groups[sec].push({k:k,def:def,cur:cur,tag:el.tagName,link:hasLink||(ov&&ov.indexOf("<a")>=0)})});
+  box.innerHTML="";order.forEach(function(sec){var h=document.createElement("h3");h.style.margin="18px 0 8px";h.textContent=SECLAB[sec]||sec;box.appendChild(h);
+    groups[sec].forEach(function(it){var c=document.createElement("div");c.className="card";var kind={H1:"Grand titre",H2:"Titre",H3:"Sous-titre",A:"Bouton / lien",LI:"Élément de liste"}[it.tag]||"Texte";
+      c.innerHTML='<label>'+esc(kind)+(C.texts[it.k]!=null?' <span class="pill">modifié</span>':'')+'<textarea rows="'+Math.min(8,Math.max(1,Math.ceil(it.cur.length/90)+it.cur.split("\n").length-1))+'"></textarea></label>';
+      var ta=c.querySelector("textarea");ta.value=it.cur;if(it.link){var w=document.createElement("p");w.className="intro";w.style.margin="6px 0 0";w.textContent="Ce texte contient un lien : modifiez-le plutôt dans « Éditer le site » pour le conserver.";c.appendChild(w)}ta.oninput=function(){if(ta.value===it.def)delete C.texts[it.k];else C.texts[it.k]=esc(ta.value).replace(/\*\*([^*]+)\*\*/g,"<b>$1</b>").replace(/\n/g,"<br>");dirty();if(VW)previewC()};
+      if(C.texts[it.k]!=null){var rb=document.createElement("button");rb.className="btn sec sm";rb.textContent="Rétablir le texte d'origine";rb.style.marginTop="8px";rb.onclick=function(){delete C.texts[it.k];dirty();renderTexts()};c.appendChild(rb)}
+      box.appendChild(c)})})}
+$("#txtSearch").addEventListener("input",function(){renderTexts()});
+
+/* --- Images --- */
+function renderImages(){var box=$("#imgList");box.innerHTML="";if(!PAGE)return;
+  PAGE.querySelectorAll("[data-img],[data-bg]").forEach(function(el){var k=el.dataset.img||el.dataset.bg,def=el.dataset.img?el.getAttribute("src"):((el.getAttribute("style")||"").match(/url\(([^)]+)\)/)||[,""])[1].replace(/['"]/g,"");
+    var cur=C.images[k]||def,c=document.createElement("div");c.className="card";
+    c.innerHTML='<div style="aspect-ratio:16/10;background:#dde6ee center/cover no-repeat;border-radius:6px;margin-bottom:8px;background-image:url(\''+esc(String(cur).replace(/^(?!\/|https?:)/,"/"))+'\')"></div><div style="font-size:13px;color:var(--muted)">'+esc((SECLAB[k.split(".")[1]]||SECLAB[k.split(".")[0]]||"")+" "+(el.getAttribute("alt")||""))+'</div>';
+    var t=document.createElement("div");t.className="tools";t.appendChild(fileButton("Remplacer",function(f){toast("Envoi de l'image...");uploadImage(f,1600).then(function(u){C.images[k]=u;dirty();renderImages();toast("Image remplacée. Pensez à publier.")}).catch(function(e){toast(e.message,true)})}));
+    if(C.images[k]){var r=document.createElement("button");r.className="btn sec sm";r.textContent="Image d'origine";r.onclick=function(){delete C.images[k];dirty();renderImages()};t.appendChild(r)}
+    c.appendChild(t);box.appendChild(c)})}
+
+/* --- Formules --- */
+function renderTiers(){var box=$("#tierList");box.innerHTML="";
+  C.tiers.forEach(function(t,i){var c=document.createElement("div");c.className="card";
+    c.innerHTML='<div class="grid g4" style="grid-template-columns:2fr 1fr 1fr 1fr"><label>Nom de la formule<input data-k="id"></label><label>Prix (€)<input type="number" min="0" step="100" data-k="price"></label><label class="chk"><input type="checkbox" data-c="plus">Afficher « et + »</label><label class="chk"><input type="checkbox" data-c="limited">« Places limitées »</label></div>';
+    c.querySelectorAll("[data-k]").forEach(function(el){bind(el,t,el.dataset.k,el.dataset.k==="price");el.addEventListener("change",renderPerks)});
+    c.querySelectorAll("[data-c]").forEach(function(el){el.checked=!!t[el.dataset.c];el.onchange=function(){t[el.dataset.c]=el.checked;dirty()}});
+    var tl=document.createElement("div");tl.className="tools";tl.innerHTML='<button class="btn sec sm" data-a="up">Monter</button><button class="btn sec sm" data-a="down">Descendre</button><button class="btn dang sm" data-a="del">Supprimer la formule</button>';
+    tl.onclick=function(e){var a=e.target.dataset.a;if(!a)return;var j=a==="up"?i-1:i+1;
+      if(a==="del"){if(!confirm("Supprimer cette formule et sa colonne de contreparties ?"))return;C.tiers.splice(i,1);C.perks.forEach(function(p){p.splice(i+1,1)})}
+      else{if(j<0||j>=C.tiers.length)return;var x=C.tiers[i];C.tiers[i]=C.tiers[j];C.tiers[j]=x;C.perks.forEach(function(p){var y=p[i+1];p[i+1]=p[j+1];p[j+1]=y})}
+      dirty();renderTiers()};c.appendChild(tl);box.appendChild(c)});renderPerks()}
+function cellText(v){return v===1||v==="1"?"oui":(v===0||v==="0"||v==null||v==="")?"non":String(v)}
+function cellVal(s){s=String(s).trim();var l=s.toLowerCase();return l==="oui"||l==="1"?1:(l==="non"||l==="0"||l==="")?0:s}
+function renderPerks(){var tb=$("#perkTable"),h='<thead><tr><th>Contrepartie</th>';C.tiers.forEach(function(t){h+='<th>'+esc(t.id)+'</th>'});tb.innerHTML=h+'<th></th></tr></thead><tbody></tbody>';
+  var body=tb.tBodies[0];C.perks.forEach(function(p,r){var tr=document.createElement("tr");var td=document.createElement("td");var inp=document.createElement("input");inp.value=p[0];inp.style.minWidth="260px";inp.oninput=function(){p[0]=inp.value;dirty()};td.appendChild(inp);tr.appendChild(td);
+    C.tiers.forEach(function(t,i){var c=document.createElement("td"),x=document.createElement("input");x.value=cellText(p[i+1]);x.style.width="110px";x.oninput=function(){p[i+1]=cellVal(x.value);dirty()};c.appendChild(x);tr.appendChild(c)});
+    var dc=document.createElement("td");dc.innerHTML='<button class="btn dang sm">Supprimer</button>';dc.firstChild.onclick=function(){C.perks.splice(r,1);dirty();renderPerks()};tr.appendChild(dc);body.appendChild(tr)})}
+$("#addTier").onclick=function(){C.tiers.push({id:"Nouvelle formule",price:0});C.perks.forEach(function(p){p.push(0)});dirty();renderTiers()};
+$("#addPerk").onclick=function(){var p=["Nouvelle contrepartie"];C.tiers.forEach(function(){p.push(0)});C.perks.push(p);dirty();renderPerks()};
+
+/* --- Vidéo et logos --- */
+function renderSim(){var S=C.sim,box=$("#simSurf");box.innerHTML="";
+  [["main","Grand-voile"],["spin","Spinnaker (grande voile bleue)"],["hull","Coque"]].forEach(function(x){var s=S.surfaces[x[0]],c=document.createElement("div");c.className="card";
+    c.innerHTML='<h3 style="margin-bottom:10px">'+esc(x[1])+'</h3><div class="grid g4" style="grid-template-columns:1fr 1fr 1fr 1fr"><label class="chk"><input type="checkbox" data-c="enabled">Proposer cet emplacement</label><label class="chk"><input type="checkbox" data-c="checked">Coché par défaut</label><label>Taille du logo (%)<input type="range" min="40" max="100" data-k="scale"><span data-v></span></label><label>Nom affiché<input data-k="label"></label></div>';
+    c.querySelectorAll("[data-c]").forEach(function(el){el.checked=!!s[el.dataset.c];el.onchange=function(){s[el.dataset.c]=el.checked;dirty()}});
+    var r=c.querySelector('[data-k="scale"]'),v=c.querySelector("[data-v]");r.value=s.scale;v.textContent=s.scale+" %";r.oninput=function(){s.scale=+r.value;v.textContent=r.value+" %";dirty()};
+    bind(c.querySelector('[data-k="label"]'),s,"label");box.appendChild(c)});
+  $("#wmOn").checked=!!S.watermark.enabled;$("#wmOn").onchange=function(){S.watermark.enabled=this.checked;dirty()};
+  bind($("#wmOp"),S.watermark,"opacity",true);bind($("#wmSize"),S.watermark,"size",true);bind($("#demoText"),S,"demoText");
+  var db=$("#demoLogoBox");db.innerHTML="";if(S.demoLogo){var im=document.createElement("img");im.src=S.demoLogo;im.style.height="40px";db.appendChild(im);var r2=document.createElement("button");r2.className="btn sec sm";r2.textContent="Retirer";r2.onclick=function(){S.demoLogo="";dirty();renderSim()};db.appendChild(r2)}
+  db.appendChild(fileButton(S.demoLogo?"Changer":"Importer un logo",function(f){uploadImage(f,1000).then(function(u){S.demoLogo=u;dirty();renderSim()}).catch(function(e){toast(e.message,true)})}))}
+
+/* --- Sections --- */
+var SECS=[["projet","Projet et vocabulaire"],["galerie","Galerie photos"],["video","Vidéo YouTube"],["equipe","Équipe"],["budget","Budget"],["offres","Offres (marque employeur)"],["formules-bloc","Formules"],["simulateur","Vidéo J80 avec logo"],["sponsors","Sponsors"],["contact","Contact"]];
+function renderSections(){var box=$("#secList");box.innerHTML="";SECS.forEach(function(s){var l=document.createElement("label");l.className="chk";l.innerHTML='<input type="checkbox">'+esc(s[1]);var i=l.firstChild;i.checked=C.hidden.indexOf(s[0])<0;
+    i.onchange=function(){C.hidden=C.hidden.filter(function(x){return x!==s[0]});if(!i.checked)C.hidden.push(s[0]);dirty()};box.appendChild(l)});
+  var y=$("#ytId");y.value=C.youtube||"";y.oninput=function(){var v=y.value.trim(),m=v.match(/(?:v=|youtu\.be\/|embed\/|shorts\/)([A-Za-z0-9_-]{6,20})/);C.youtube=m?m[1]:v;dirty()}}
+
+
+/* --- Publication --- */
+$("#saveContent").onclick=function(){var b=this;b.disabled=true;api("/api/admin/content",{method:"PUT",body:JSON.stringify(C)}).then(function(){dirty(false);toast("Modifications publiées sur le site.")}).catch(function(e){toast(e.message,true)}).then(function(){b.disabled=false})};
+
+/* --- Demandes --- */
+var open=null;
+function loadLeads(){api("/api/admin/leads").then(function(j){LEADS=j.leads||[];renderLeads()}).catch(function(e){$("#leadsBox").innerHTML='<p class="err">'+esc(e.message)+'</p>'})}
+$("#reloadLeads").onclick=loadLeads;$("#leadFilter").onchange=renderLeads;
+function fmt(d){try{return new Date(d).toLocaleString("fr-FR",{dateStyle:"short",timeStyle:"short"})}catch(e){return d}}
+function renderLeads(){var f=$("#leadFilter").value,L=LEADS.filter(function(l){return!f||l.status===f}),box=$("#leadsBox");
+  if(!L.length){box.innerHTML='<div class="card">Aucune demande pour le moment.</div>';return}
+  var h='<table><thead><tr><th>Date</th><th>Entreprise</th><th>Contact</th><th>Soutien</th><th>Statut</th></tr></thead><tbody>';
+  L.forEach(function(l){h+='<tr class="lead" data-id="'+esc(l.id)+'"><td>'+esc(fmt(l.date))+'</td><td><b>'+esc(l.ent)+'</b></td><td>'+esc(l.prenom+" "+l.nom)+'<br><span style="color:var(--muted)">'+esc(l.mail)+'</span></td><td>'+esc(l.type)+'<br><span style="color:var(--muted)">'+esc(l.formule)+'</span></td><td><span class="pill '+esc(l.status)+'">'+esc(l.status)+'</span></td></tr>';
+    if(open===l.id)h+='<tr><td colspan="5" class="detail" id="detail"></td></tr>'});
+  box.innerHTML=h+'</tbody></table>';
+  box.querySelectorAll("tr.lead").forEach(function(tr){tr.onclick=function(){open=open===tr.dataset.id?null:tr.dataset.id;renderLeads()}});
+  if(open)renderDetail(LEADS.filter(function(l){return l.id===open})[0])}
+function renderDetail(l){if(!l)return;var d=$("#detail"),tpls=(SETTINGS&&SETTINGS.templates)||[];
+  d.innerHTML='<div class="grid g2"><div><p style="margin:0 0 6px"><b>'+esc(l.prenom+" "+l.nom)+'</b>, '+esc(l.fonction||"fonction non précisée")+'<br>'+esc(l.ent)+'<br><a href="mailto:'+esc(l.mail)+'">'+esc(l.mail)+'</a>'+(l.tel?' &nbsp; <a href="tel:'+esc(l.tel)+'">'+esc(l.tel)+'</a>':"")+'</p>'+
+   '<p style="white-space:pre-wrap;background:#fff;border-radius:6px;padding:10px;margin:8px 0">'+esc(l.message||"(pas de message)")+'</p>'+
+   '<div class="grid g2"><label>Statut<select id="lStatus">'+["nouveau","contacté","rendez-vous","signé","refusé"].map(function(s){return"<option"+(s===l.status?" selected":"")+">"+s+"</option>"}).join("")+'</select></label></div>'+
+   '<label style="margin-top:8px">Notes internes<textarea id="lNotes">'+esc(l.notes||"")+'</textarea></label><div class="tools"><button class="btn sec sm" id="lSave">Enregistrer</button><button class="btn dang sm" id="lDel">Supprimer la demande</button></div>'+
+   '<ul class="hist">'+(l.history||[]).map(function(h){return'<li class="'+(h.ok?"":"ko")+'">'+esc(fmt(h.date))+" : "+esc(h.kind)+(h.subject?" « "+esc(h.subject)+" »":"")+(h.ok?"":" (échec : "+esc(h.error)+")")+'</li>'}).join("")+'</ul></div>'+
+   '<div><h3 style="margin-bottom:8px">Répondre</h3><label>Modèle<select id="rTpl"><option value="">Message libre</option>'+tpls.map(function(t,i){return'<option value="'+i+'">'+esc(t.name)+'</option>'}).join("")+'</select></label>'+
+   '<label style="margin-top:8px">Objet<input id="rSub"></label><label style="margin-top:8px">Message<textarea id="rBody" rows="9"></textarea></label><p class="intro" style="margin:6px 0">{{prenom}}, {{nom}} et {{entreprise}} sont remplacés automatiquement.</p><div class="tools"><button class="btn" id="rSend">Envoyer</button><button class="btn sec" id="rMail">Ouvrir dans ma messagerie</button></div></div></div>';
+  $("#rTpl").onchange=function(){var t=tpls[+this.value];if(t){$("#rSub").value=t.subject;$("#rBody").value=t.body}};
+  $("#lSave").onclick=function(){api("/api/admin/lead",{method:"PATCH",body:JSON.stringify({id:l.id,status:$("#lStatus").value,notes:$("#lNotes").value})}).then(function(j){Object.assign(l,j.lead);toast("Demande mise à jour.");renderLeads()}).catch(function(e){toast(e.message,true)})};
+  $("#lDel").onclick=function(){if(!confirm("Supprimer définitivement cette demande ?"))return;api("/api/admin/lead",{method:"DELETE",body:JSON.stringify({id:l.id})}).then(function(){LEADS=LEADS.filter(function(x){return x.id!==l.id});open=null;renderLeads();toast("Demande supprimée.")}).catch(function(e){toast(e.message,true)})};
+  $("#rMail").onclick=function(){var v={prenom:l.prenom,nom:l.nom,entreprise:l.ent},f=function(s){return String(s||"").replace(/\{\{(\w+)\}\}/g,function(_,k){return v[k]||""})};
+    location.href="mailto:"+encodeURIComponent(l.mail)+"?subject="+encodeURIComponent(f($("#rSub").value))+"&body="+encodeURIComponent(f($("#rBody").value))};
+  $("#rSend").onclick=function(){var b=this;b.disabled=true;api("/api/admin/send",{method:"POST",body:JSON.stringify({leadId:l.id,to:l.mail,subject:$("#rSub").value,body:$("#rBody").value})})
+    .then(function(j){if(j.lead)Object.assign(l,j.lead);toast("E-mail envoyé à "+l.mail+".");renderLeads()}).catch(function(e){toast(e.message,true);loadLeads()}).then(function(){b.disabled=false})}}
+$("#csv").onclick=function(){var cols=["date","status","ent","prenom","nom","fonction","mail","tel","type","formule","message","notes"],q=function(v){return'"'+String(v==null?"":v).replace(/"/g,'""')+'"'};
+  var csv="\ufeff"+cols.join(";")+"\n"+LEADS.map(function(l){return cols.map(function(c){return q(l[c])}).join(";")}).join("\n");
+  var a=document.createElement("a");a.href=URL.createObjectURL(new Blob([csv],{type:"text/csv"}));a.download="demandes-icam-voile.csv";a.click()};
+
+/* --- E-mails --- */
+function loadSettings(){api("/api/admin/settings").then(function(j){SETTINGS=j.settings;
+  $("#fwdG").checked=SETTINGS.forwardGoogle!==false;$("#gUrl").value=SETTINGS.appsScriptUrl||"";
+  $("#mailStatus").innerHTML=(SETTINGS.forwardGoogle!==false&&SETTINGS.appsScriptUrl?'<div class="notice ok">Les demandes sont transmises à votre script Google, qui envoie les e-mails comme sur la première version du site.</div>':'')+(j.mailConfigured?'<div class="notice ok">Envoi d\'e-mails actif'+(j.from?" (expéditeur : "+esc(j.from)+")":"")+'.</div>':'<div class="notice warn">Resend non configuré : le bouton « Envoyer » des demandes ne fonctionne pas ; utilisez « Ouvrir dans ma messagerie ». Les demandes restent enregistrées ici.</div>');
+  $("#notifyTo").value=(SETTINGS.notifyTo||[]).join(", ");$("#sendConf").checked=!!SETTINGS.sendConfirmation;$("#confSub").value=SETTINGS.confirmSubject||"";$("#confBody").value=SETTINGS.confirmBody||"";renderTpls()}).catch(function(e){$("#mailStatus").innerHTML='<p class="err">'+esc(e.message)+'</p>'})}
+function renderTpls(){var box=$("#tplList");box.innerHTML="";SETTINGS.templates.forEach(function(t,i){var c=document.createElement("div");c.className="card";
+  c.innerHTML='<div class="grid g2"><label>Nom du modèle<input data-k="name"></label><label>Objet<input data-k="subject"></label></div><label style="margin-top:10px">Message<textarea rows="6" data-k="body"></textarea></label>';
+  c.querySelectorAll("[data-k]").forEach(function(el){el.value=t[el.dataset.k]||"";el.oninput=function(){t[el.dataset.k]=el.value}});
+  var d=document.createElement("div");d.className="tools";d.innerHTML='<button class="btn dang sm">Supprimer le modèle</button>';d.firstChild.onclick=function(){SETTINGS.templates.splice(i,1);renderTpls()};c.appendChild(d);box.appendChild(c)})}
+$("#addTpl").onclick=function(){SETTINGS.templates.push({name:"Nouveau modèle",subject:"",body:""});renderTpls()};
+$("#gTest").onclick=function(){var b=this;b.disabled=true;api("/api/admin/settings",{method:"PUT",body:JSON.stringify(Object.assign(SETTINGS,{forwardGoogle:$("#fwdG").checked,appsScriptUrl:$("#gUrl").value.trim()}))})
+  .then(function(){return api("/api/admin/test-google",{method:"POST",body:JSON.stringify({to:$("#gTestTo").value.trim()})})}).then(function(){toast("Demande de test transmise au script Google : vérifiez vos e-mails.")}).catch(function(e){toast(e.message,true)}).then(function(){b.disabled=false})};
+$("#saveMail").onclick=function(){SETTINGS.forwardGoogle=$("#fwdG").checked;SETTINGS.appsScriptUrl=$("#gUrl").value.trim();SETTINGS.notifyTo=$("#notifyTo").value;SETTINGS.sendConfirmation=$("#sendConf").checked;SETTINGS.confirmSubject=$("#confSub").value;SETTINGS.confirmBody=$("#confBody").value;
+  api("/api/admin/settings",{method:"PUT",body:JSON.stringify(SETTINGS)}).then(function(j){SETTINGS=j.settings;$("#notifyTo").value=SETTINGS.notifyTo.join(", ");toast("Réglages e-mail enregistrés.")}).catch(function(e){toast(e.message,true)})};
+$("#testSend").onclick=function(){var to=$("#testTo").value.trim();api("/api/admin/send",{method:"POST",body:JSON.stringify({to:to,subject:"Test d'envoi Icam Voile Lille",body:"Ceci est un e-mail de test envoyé depuis l'administration du site."})}).then(function(){toast("E-mail de test envoyé.")}).catch(function(e){toast(e.message,true)})};
+
+if(TOKEN)start();
+})();
+</script>
+</body>
+</html>

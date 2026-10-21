@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<title>Icam Voile Lille | Partenaires de notre campagne CCE 59</title>
+<meta content="Icam Voile Lille engage deux voiliers et une équipe terre sur la Course Croisière EDHEC 2027. Devenez partenaire : marque employeur, visibilité, mécénat." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;800&amp;family=Saira:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --abyss:#0b2a45;      /* fond sombre principal */
+  --navy:#175082;       /* bleu Icam Voile */
+  --signal:#ff7a2f;     /* orange régate, actions */
+  --signal-soft:#ffb06e;/* orange de la charte */
+  --foam:#eef4f8;       /* fond clair */
+  --white:#ffffff;
+  --ink:#0f2c47;
+  --muted:#4f6b84;
+  --line:#d3e0ea;
+  --display:"Saira Condensed","Arial Narrow","Roboto Condensed",Arial,sans-serif;
+  --text:"Saira","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*,*:before,*:after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(80px + env(safe-area-inset-top,0px))}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;overflow-x:clip;background:var(--foam);color:var(--ink);font:400 17px/1.6 var(--text)}
+img,video,svg{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--signal);outline-offset:3px}
+h1,h2,h3{font-family:var(--display);font-weight:800;line-height:1.02;margin:0;letter-spacing:-.005em}
+h2{font-size:clamp(38px,5.6vw,64px)}
+h3{font-size:clamp(24px,2.4vw,30px);font-weight:600}
+p{margin:0 0 1em}
+.w{max-width:1180px;margin:0 auto;padding:0 24px}
+section{padding:96px 0}
+.lead{font-size:clamp(17px,1.6vw,20px);color:var(--muted);max-width:62ch;margin:16px 0 44px}
+.dark{background:var(--abyss);color:#e6eef5}
+.dark h2,.dark h3{color:var(--white)}
+.dark .lead{color:#b8cadb}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--signal);color:var(--abyss);font:600 17px/1 var(--text);padding:16px 26px;border-radius:6px;text-decoration:none;border:0;cursor:pointer;transition:background .2s,transform .2s}
+.btn:hover{background:#ff8f4f}
+.btn:active{transform:translateY(1px)}
+.btn.ghost{background:transparent;color:inherit;box-shadow:inset 0 0 0 2px currentColor}
+.btn.ghost:hover{background:#ffffff14}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+.hl{background:#fff3b0;color:#3a2e00;padding:0 .2em;border-radius:2px}
+
+/* ===== Navigation ===== */
+.nav{position:sticky;top:0;z-index:50;background:#ffffffee;backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.nav .w{display:flex;align-items:center;gap:20px;height:76px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--navy);flex:none}
+.brand img{width:58px;height:58px;border-radius:50%;background:#fff;box-shadow:0 0 0 2px var(--navy),0 4px 14px #17508233}
+.brand b{font:800 23px/1 var(--display);letter-spacing:.01em}
+.school{display:flex;align-items:center;padding-left:16px;margin-left:4px;border-left:1px solid var(--line);height:44px;flex:none}
+.school img{height:40px;width:auto}
+@media (max-width:700px){.school img{height:28px}.school{padding-left:10px}}
+.brand small{display:block;font:500 13px/1.2 var(--text);color:var(--muted);margin-top:3px}
+.links{display:flex;align-items:center;gap:4px;margin-left:auto}
+.links a{text-decoration:none;font-weight:500;font-size:15px;color:var(--ink);padding:8px 11px;border-radius:5px}
+.links a:hover,.links a.on{background:var(--foam);color:var(--navy)}
+.links .ig{display:grid;place-items:center;width:40px;height:40px;padding:0}
+.links .ig svg{width:22px;height:22px}
+.links .btn{margin-left:8px;padding:12px 18px;font-size:15px}
+.links .btn:hover{background:#ff8f4f;color:var(--abyss)}
+.burger{display:none;margin-left:auto;width:46px;height:46px;border:0;background:transparent;border-radius:6px;cursor:pointer;color:var(--navy)}
+.burger span{display:block;width:24px;height:2.5px;background:currentColor;margin:5px auto;transition:transform .2s,opacity .2s}
+.nav.open .burger span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+.nav.open .burger span:nth-child(2){opacity:0}
+.nav.open .burger span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+@media (max-width:1060px){
+  .burger{display:block}
+  .links{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch;background:#fff;padding:12px 24px 22px;border-bottom:1px solid var(--line);box-shadow:0 18px 30px #0b2a4522;gap:2px}
+  .nav.open .links{display:flex}
+  .links a{font-size:17px;padding:12px}
+  .links .ig{width:auto;display:flex;gap:10px;padding:12px}
+  .links .ig:after{content:"Instagram"}
+  .links .btn{margin:10px 0 0;justify-content:center}
+}
+
+/* ===== Hero ===== */
+.hero{background:var(--abyss);color:#fff;overflow:hidden}
+.hero .w{display:grid;grid-template-columns:1.05fr .95fr;gap:0;align-items:stretch;min-height:min(86vh,760px);max-width:none;padding:0}
+.hero .copy{padding:72px 48px 72px max(24px,calc((100vw - 1180px)/2 + 24px));display:flex;flex-direction:column;justify-content:center}
+.hero .where{font-weight:500;color:var(--signal-soft);font-size:17px;margin-bottom:22px}
+.hero h1{font-size:clamp(54px,8.4vw,120px);line-height:.9;color:#fff;text-transform:none}
+.hero p{font-size:clamp(17px,1.7vw,21px);color:#c9d8e6;max-width:46ch;margin:26px 0 30px}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px}
+.hero figure{margin:0;position:relative;min-height:420px}
+.hero figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.hero figure:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--abyss) 0,#0b2a4500 22%)}
+.countdown{display:flex;gap:26px;margin-top:44px;padding-top:24px;border-top:1px solid #ffffff26;font-variant-numeric:tabular-nums}
+.countdown div{display:flex;flex-direction:column}
+.countdown b{font:800 clamp(34px,4vw,52px)/1 var(--display);color:#fff}
+.countdown span{font-size:13px;color:#9fb6cb;margin-top:6px}
+.countdown .lbl{justify-content:flex-end;color:#c9d8e6;font-size:15px;max-width:15ch;line-height:1.35}
+@media (max-width:900px){
+  .hero .w{grid-template-columns:1fr;padding:0;min-height:0}
+  .hero figure{order:-1;min-height:0;aspect-ratio:4/3}
+  .hero figure:after{background:linear-gradient(0deg,var(--abyss) 0,#0b2a4500 35%)}
+  .hero .copy{padding:8px 22px 56px}
+  .countdown{gap:18px}
+}
+
+/* ===== Projet ===== */
+.race-stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid var(--ink);margin-bottom:72px}
+.race-stats div{padding:22px 18px 0 0}
+.race-stats b{display:block;font:800 clamp(40px,5vw,64px)/1 var(--display);color:var(--navy);font-variant-numeric:tabular-nums}
+.race-stats span{font-size:15px;color:var(--muted)}
+.src{font-size:13px;color:var(--muted);margin:-56px 0 72px}
+@media (max-width:760px){.race-stats{grid-template-columns:repeat(2,1fr);row-gap:20px}}
+.fleet{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.unit{background:#fff;border-radius:10px;overflow:hidden;border:1px solid var(--line);display:flex;flex-direction:column}
+.unit img{aspect-ratio:3/2;object-fit:cover;width:100%}
+.unit .b{padding:24px}
+.unit .k{font-weight:600;color:var(--signal);font-size:14px;margin-bottom:8px}
+.unit h3{margin-bottom:10px;color:var(--ink)}
+.unit p{color:var(--muted);font-size:16px;margin:0}
+.unit.terre{background:var(--navy);color:#e6eef5;border-color:var(--navy)}
+.unit.terre h3{color:#fff}.unit.terre p{color:#c9d8e6}.unit.terre .k{color:var(--signal-soft)}
+.unit.terre ul{margin:14px 0 0;padding:0 0 0 18px;font-size:15px;color:#e6eef5}
+.unit.terre li{margin-bottom:6px}
+@media (max-width:900px){.fleet{grid-template-columns:1fr}}
+.glossary{margin-top:72px;display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:start}
+.glossary .intro p{color:var(--muted)}
+.terms{border-top:2px solid var(--ink)}
+.terms details{border-bottom:1px solid var(--line)}
+.terms summary{list-style:none;cursor:pointer;display:flex;align-items:baseline;gap:16px;padding:20px 0;font:600 24px/1.1 var(--display)}
+.terms summary::-webkit-details-marker{display:none}
+.terms summary small{font:400 15px var(--text);color:var(--muted)}
+.terms summary:after{content:"+";margin-left:auto;font:400 28px/1 var(--text);color:var(--signal);transition:transform .2s}
+.terms details[open] summary:after{transform:rotate(45deg)}
+.terms .def{padding:0 0 22px;color:var(--ink);max-width:62ch}
+.terms .def p{margin:0 0 .6em}
+.terms .def a{color:var(--navy)}
+@media (max-width:900px){.glossary{grid-template-columns:1fr;gap:20px}}
+
+/* ===== Galerie ===== */
+.reel{background:var(--abyss);padding:0 0 96px}
+.reel .head{display:flex;align-items:end;justify-content:space-between;gap:20px;padding-top:88px;margin-bottom:28px}
+.reel .ctrl{display:flex;gap:8px}
+.reel .ctrl button{width:50px;height:50px;border-radius:50%;border:2px solid #ffffff55;background:transparent;color:#fff;font:400 22px/1 var(--text);cursor:pointer}
+.reel .ctrl button:hover{border-color:var(--signal);color:var(--signal)}
+.track{--edge:max(20px,calc((100vw - 1180px)/2 + 24px));display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:var(--edge);padding:0 0 8px;scrollbar-width:none}
+.track:before,.track:after{content:"";flex:0 0 calc(var(--edge) - 16px)}
+.reel h2,.reel h3{color:#fff}
+.track::-webkit-scrollbar{display:none}
+.track figure{flex:0 0 auto;margin:0;scroll-snap-align:start;position:relative;height:clamp(280px,46vw,520px)}
+.track img{height:100%;width:auto;border-radius:8px;object-fit:cover}
+.track figcaption{position:absolute;left:14px;bottom:12px;right:14px;color:#fff;font-size:14px;font-weight:500;text-shadow:0 1px 8px #000a}
+.video{margin-top:56px}
+.yt{position:relative;max-width:980px;aspect-ratio:16/9;border-radius:10px;overflow:hidden;background:#000}
+.yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* ===== Equipe ===== */
+.crew-head{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end;margin-bottom:48px}
+.crew-head img{width:100%;max-height:380px;object-fit:contain}
+@media (max-width:900px){.crew-head{grid-template-columns:1fr;gap:12px}}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.filters button{font:500 15px var(--text);padding:9px 16px;border-radius:99px;border:1.5px solid var(--line);background:#fff;color:var(--ink);cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.team{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:22px;display:flex;flex-direction:column;gap:12px}
+.card .top{display:flex;gap:14px;align-items:center}
+.avatar{width:58px;height:58px;border-radius:50%;flex:none;display:grid;place-items:center;background:var(--navy);color:#fff;font:800 22px var(--display);overflow:hidden}
+.avatar img{width:100%;height:100%;object-fit:cover}
+.card h3{font-size:24px;color:var(--ink)}
+.card .role{font-weight:600;color:var(--signal);font-size:15px}
+.card dl{margin:0;display:grid;gap:10px;font-size:15px}
+.card dt{font-weight:600;color:var(--navy);font-size:13px}
+.card dd{margin:0;color:var(--muted)}
+.card .crewtag{align-self:flex-start;font-size:13px;font-weight:600;border-radius:99px;padding:3px 10px;background:var(--foam);color:var(--navy)}
+.todo{font-style:italic;opacity:.7}
+#simtabs~#simveste{margin-top:20px}#simtabs~#simulateur{margin-top:20px}
+.pole{margin-bottom:44px}.pole>h3{font-size:26px;color:var(--ink);margin-bottom:16px;padding-bottom:8px;border-bottom:2px solid var(--line)}
+.pgrid{display:flex;flex-wrap:wrap;gap:18px}
+.mb{position:relative;width:210px;min-height:290px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:20px 16px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;overflow:hidden;cursor:pointer}
+.mb.lead{width:250px;border:2px solid var(--signal)}
+.mb .ph{width:112px;height:112px;border-radius:50%;overflow:hidden;background:var(--navy);color:#fff;display:grid;place-items:center;font:800 34px var(--display)}
+.mb.lead .ph{width:136px;height:136px}.mb .ph img{width:100%;height:100%;object-fit:cover}
+.mb h4{font-size:20px;color:var(--ink)}.mb .role{font-weight:600;color:var(--signal);font-size:14px}
+.mb .crewtag{font-size:12px;font-weight:600;border-radius:99px;padding:3px 10px;background:var(--foam);color:var(--navy)}
+.mb .info{position:absolute;inset:0;margin:0;padding:16px;background:var(--navy);color:#fff;display:grid;gap:8px;align-content:center;text-align:left;font-size:13px;opacity:0;visibility:hidden;transition:opacity .2s}
+.mb .info dt{font-weight:700;color:#9fd3ff;font-size:12px}.mb .info dd{margin:0;color:#e6eef5}
+.mb:hover .info,.mb:focus-within .info,.mb.open .info{opacity:1;visibility:visible}
+@media(max-width:640px){.mb,.mb.lead{width:100%;max-width:340px}}
+.social{margin-top:72px;display:grid;grid-template-columns:1.1fr .9fr;gap:0;border-radius:12px;overflow:hidden;background:var(--navy);color:#fff}
+.social .b{padding:44px}
+.social h3{color:#fff;font-size:clamp(30px,3.4vw,44px);font-weight:800;margin-bottom:14px}
+.social p{color:#c9d8e6}
+.followers{display:flex;gap:36px;margin:26px 0;font-variant-numeric:tabular-nums}
+.followers b{display:block;font:800 clamp(46px,5.6vw,72px)/1 var(--display)}
+.followers span{font-size:14px;color:#b8cadb}
+.goal{margin:6px 0 28px}
+.goal .bar{height:10px;background:#ffffff26;border-radius:5px;overflow:hidden}
+.goal i{display:block;height:100%;width:0;background:var(--signal);border-radius:5px;transition:width 1.4s ease}
+.goal small{display:block;margin-top:8px;color:#b8cadb;font-size:14px}
+.social .pics{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:3px;min-height:360px}
+.social .pics img{width:100%;height:100%;object-fit:cover}
+@media (max-width:900px){.social{grid-template-columns:1fr}.social .b{padding:30px 24px}.social .pics{min-height:260px}}
+
+/* ===== Budget ===== */
+.budget{display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:start}
+@media (max-width:960px){.budget{grid-template-columns:1fr;gap:40px}}
+.totals{display:flex;flex-wrap:wrap;gap:40px;margin-bottom:22px;font-variant-numeric:tabular-nums}
+.totals b{display:block;font:800 clamp(40px,4.6vw,58px)/1 var(--display);color:#fff}
+.totals .need b{color:var(--signal)}
+.totals span{font-size:14px;color:#b8cadb}
+.gauge{height:12px;background:#ffffff1f;border-radius:6px;overflow:hidden;margin-bottom:40px}
+.gauge i{display:block;height:100%;width:0;background:#fff;transition:width 1.2s ease}
+.lines{list-style:none;margin:0;padding:0;counter-reset:l}
+.lines li{counter-increment:l;display:grid;grid-template-columns:42px 1fr auto;gap:4px 14px;padding:18px 0;border-top:1px solid #ffffff1f}
+.lines li:before{content:counter(l);grid-row:1/3;font:800 26px/1 var(--display);color:var(--signal-soft)}
+.lines .t{font-weight:600;color:#fff}
+.lines .v{font:800 24px/1 var(--display);color:#fff;font-variant-numeric:tabular-nums;text-align:right}
+.lines .d{grid-column:2/4;font-size:14px;color:#9fb6cb}
+.lines .bar{grid-column:2/4;height:6px;background:#ffffff14;border-radius:3px;overflow:hidden;margin-top:6px}
+.lines .bar i{display:block;height:100%;width:0;background:var(--signal);transition:width 1.2s ease}
+.equiv h3{font-size:28px;margin-bottom:6px}
+.equiv>p{color:#b8cadb;font-size:15px}
+.equiv ul{list-style:none;margin:20px 0 0;padding:0;display:grid;gap:10px}
+.equiv li{display:grid;grid-template-columns:110px 1fr;gap:14px;align-items:baseline;background:#ffffff0f;border-radius:8px;padding:14px 18px}
+.equiv li b{font:800 26px/1 var(--display);color:var(--signal-soft);font-variant-numeric:tabular-nums}
+.equiv li span{font-size:15px;color:#e6eef5}
+
+/* ===== Offres ===== */
+.why{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:20px;margin-bottom:96px}
+.why>div{border-radius:10px;padding:30px;background:#fff;border:1px solid var(--line)}
+.why .main{background:var(--signal);border:0;color:var(--abyss)}
+.why .main h3{font-size:clamp(30px,3.2vw,42px);font-weight:800;color:var(--abyss)}
+.why .main li{color:#2a1300}
+.why h3{color:var(--ink);margin-bottom:14px}
+.why ul{margin:0;padding:0 0 0 18px;display:grid;gap:10px;font-size:16px;color:var(--muted)}
+.why li b{color:var(--ink)}
+.why .main li b{color:var(--abyss)}
+@media (max-width:960px){.why{grid-template-columns:1fr}}
+.tiers-wrap{overflow-x:auto;margin:0 -24px;padding:16px 24px 6px}
+table.tiers{border-collapse:separate;border-spacing:0;width:100%;min-width:820px;background:#fff;border-radius:12px;border:1px solid var(--line)}
+.tiers th,.tiers td{padding:14px 16px;text-align:center;border-bottom:1px solid var(--line);font-size:15px;transition:background .2s}
+.tiers tr:last-child td{border-bottom:0}
+.tiers th:first-child,.tiers td:first-child{text-align:left;position:sticky;left:0;background:#fff;z-index:1;width:34%;color:var(--ink)}
+.tiers thead th{vertical-align:bottom;padding:22px 16px 18px}
+.tiers thead th button{all:unset;cursor:pointer;display:block;width:100%;border-radius:8px;padding:6px 0}
+.tiers thead th button:focus-visible{outline:3px solid var(--signal)}
+.tiers .name{display:block;font:800 30px/1 var(--display);color:var(--ink)}
+.tiers .price{display:block;font:800 24px/1.2 var(--display);color:var(--navy);margin-top:6px}
+.tiers .net{display:block;font-size:13px;color:var(--muted);margin-top:4px}
+.tiers .limited{display:inline-block;margin-top:8px;font-size:12px;font-weight:600;background:var(--abyss);color:#fff;border-radius:99px;padding:3px 10px}
+.tiers td.sel,.tiers th.sel{background:#fff1e6}
+.tiers th.sel .name{color:var(--signal)}
+.tiers .yes{display:inline-block;width:22px;height:22px;border-radius:50%;background:var(--navy);position:relative;vertical-align:middle}
+.tiers .yes:after{content:"";position:absolute;left:7px;top:4px;width:6px;height:11px;border:solid #fff;border-width:0 2.5px 2.5px 0;transform:rotate(45deg)}
+.tiers .no{display:inline-block;width:12px;height:2px;background:#c3d1dc;vertical-align:middle}
+.tiers .txt{font-weight:600;color:var(--navy)}
+.tiers tfoot td{padding:18px 12px;border-bottom:0;border-top:1px solid var(--line)}
+.tiers tfoot .btn{padding:12px 16px;font-size:15px;width:100%;justify-content:center}
+.tier-note{font-size:14px;color:var(--muted);margin-top:16px;max-width:80ch}
+
+
+
+/* Simulateur video */
+.mecenat-txt{margin-top:72px;background:var(--abyss);color:#e6eef5;border-radius:10px;padding:34px;max-width:900px}
+.mecenat-txt h3{color:#fff;font-size:clamp(26px,2.8vw,34px);font-weight:800;margin-bottom:12px}
+.mecenat-txt .fine{font-size:13px;color:#9fb6cb;margin:0}
+.sim{margin-top:96px;display:grid;grid-template-columns:1.7fr 1fr;gap:24px;align-items:start}
+@media (max-width:1000px){.sim{grid-template-columns:1fr}}
+.stage{background:var(--abyss);border-radius:12px;overflow:hidden;position:sticky;top:96px}
+@media (max-width:1000px){.stage{position:static}}
+.screen{position:relative;aspect-ratio:16/9;background:#0b2a45}
+.screen canvas{display:block;width:100%;height:100%}
+.screen video{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
+.simload[hidden],.logo-prev[hidden]{display:none!important}
+.simload{position:absolute;inset:0;display:grid;place-items:center;color:#c9d8e6;font-weight:500}
+.simbar{display:flex;align-items:center;gap:12px;padding:10px 14px;color:#c9d8e6;font-size:14px;font-variant-numeric:tabular-nums}
+.simbar button{width:38px;height:38px;border-radius:50%;border:0;background:var(--signal);color:var(--abyss);font-size:14px;cursor:pointer;flex:none}
+.simbar input{flex:1;accent-color:var(--signal)}
+.panel{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px;display:grid;gap:16px}
+.panel h3{color:var(--ink)}
+.sim-intro{color:var(--muted);margin:0;font-size:16px}
+.field label,.field legend{display:block;font-weight:600;font-size:15px;margin-bottom:8px;padding:0}
+.field fieldset{border:0;margin:0;padding:0}
+.domrow{display:flex;gap:8px}
+.domrow input{flex:1;min-width:0;font:500 17px var(--text);padding:12px 14px;border:1.5px solid var(--line);border-radius:6px;color:var(--ink)}
+.domrow input:focus{outline:3px solid var(--signal);border-color:var(--signal)}
+.domrow .btn{padding:12px 18px}
+.upl{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center}
+.upl label{margin:0;cursor:pointer;font-weight:600;font-size:15px;padding:10px 14px;border:1.5px dashed var(--navy);border-radius:6px;color:var(--navy)}
+.upl label:focus-within{outline:3px solid var(--signal)}
+.upl input{position:absolute;width:1px;height:1px;opacity:0}
+.upl span{font-size:13px;color:var(--muted)}
+.logo-prev{display:flex;align-items:center;gap:12px;background:var(--foam);border-radius:8px;padding:10px 12px;font-size:13px;color:var(--muted)}
+.logo-prev img{height:44px;max-width:150px;object-fit:contain;background:repeating-conic-gradient(#e3eaf0 0 25%,#fff 0 50%) 0 0/12px 12px;border-radius:4px;padding:3px}
+.spots{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.spots label{display:flex;align-items:center;gap:8px;font-weight:500;font-size:15px;border:1.5px solid var(--line);border-radius:6px;padding:10px;cursor:pointer;margin:0}
+.spots label:has(input:checked){border-color:var(--navy);background:#eaf2f9}
+.spots input{width:18px;height:18px;accent-color:var(--navy);margin:0}
+.tg{display:flex!important;align-items:center;gap:8px;font-weight:500!important;margin-top:10px!important;cursor:pointer}
+.tg input{width:18px;height:18px;accent-color:var(--navy);margin:0}
+#simmsg{font-size:14px;color:var(--muted);min-height:20px;margin:0}
+#simmsg.err{color:#b3261e;font-weight:600}
+.panel .row{display:flex;flex-wrap:wrap;gap:8px}
+.panel .row .btn{padding:12px 14px;font-size:14px;flex:1;justify-content:center}
+.panel .btn.ghost{color:var(--navy)}
+.panel .btn.ghost:hover{background:var(--foam)}
+.sim-note{font-size:12.5px;color:var(--muted);margin:0}
+#simform{display:block;padding:0;background:none;border-radius:0;box-shadow:none}
+#simform label{display:block;font-size:15px}
+
+/* ===== Sponsors ===== */
+.logos{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+.logos .sp{display:flex;flex-direction:column;gap:14px;background:#fff;border-radius:10px;padding:22px;text-decoration:none;color:var(--ink);transition:transform .2s}
+.logos a.sp:hover{transform:translateY(-3px)}
+.logos .mark{height:84px;display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--line);padding-bottom:14px}
+.logos .mark img{max-height:70px;max-width:100%;object-fit:contain}
+.logos .mono{width:64px;height:64px;border-radius:10px;display:grid;place-items:center;font:800 26px var(--display);color:#fff;background:var(--navy)}
+.logos .sp-name{font:800 22px/1.1 var(--display)}
+.logos small{font-size:14px;color:var(--muted);display:flex;justify-content:space-between;gap:10px}
+.logos small u{text-decoration:none;color:var(--navy);font-weight:600}
+
+.next{margin-top:64px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px;border-top:1px solid #ffffff26;padding-top:40px}
+.next p{font:800 clamp(30px,3.6vw,46px)/1.05 var(--display);color:#fff;margin:0;max-width:22ch}
+
+/* ===== Contact ===== */
+.contact{position:relative;background:var(--abyss) center/cover no-repeat;color:#fff}
+.contact:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#0b2a45f5 0,#0b2a45e0 55%,#0b2a45b0)}
+.contact .w{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+@media (max-width:960px){.contact .w{grid-template-columns:1fr;gap:28px}}
+.contact h2{color:#fff}
+.contact .lead{color:#c9d8e6}
+.steps{list-style:none;padding:0;margin:0 0 36px;display:grid;gap:16px;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:40px 1fr;gap:12px;color:#e6eef5}
+.steps li:before{content:counter(s);width:34px;height:34px;border-radius:50%;background:var(--signal);color:var(--abyss);display:grid;place-items:center;font:800 18px var(--display)}
+.person{font-size:16px;color:#e6eef5}
+.person a{color:var(--signal-soft)}
+form{background:#fff;color:var(--ink);border-radius:12px;padding:32px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:560px){form{grid-template-columns:1fr;padding:22px}}
+form label{font-size:14px;font-weight:600;display:grid;gap:6px}
+form .f{grid-column:1/-1}
+form input,form select,form textarea{font:400 16px var(--text);color:var(--ink);background:#fff;border:1.5px solid var(--line);border-radius:6px;padding:12px 13px;width:100%}
+form input:focus,form select:focus,form textarea:focus{outline:3px solid var(--signal);border-color:var(--signal)}
+form .chk{display:flex;gap:10px;align-items:flex-start;font-weight:400;font-size:13px}
+form .chk input{width:auto;margin-top:3px}
+#msg{grid-column:1/-1;font-size:15px;min-height:22px;margin:0}
+
+footer{background:#071d31;color:#9fb6cb;padding:40px 0;font-size:14px}
+footer .w{display:flex;flex-wrap:wrap;gap:22px;align-items:center}
+footer .logo{width:62px;height:62px;border-radius:50%;background:#fff}
+footer .sp{flex:1}
+footer .partner{height:52px;width:auto;background:#fff;border-radius:6px;padding:6px}
+footer a{color:#e6eef5}
+
+@media (max-width:700px){
+  body{font-size:16px}
+  section{padding:64px 0}
+  .w{padding:0 20px}
+  .brand img{width:50px;height:50px}
+  .brand b{font-size:20px}
+  .brand small{display:none}
+  .src{margin:-50px 0 56px}
+  .race-stats{margin-bottom:64px}
+  .why{margin-bottom:64px}
+  .mecenat,.sim{margin-top:64px}
+  .tiers-wrap{margin:0 -20px;padding:16px 20px 6px}
+}
+
+/* ===== v4 : correctifs et mobile ===== */
+[hidden],.icv-removed{display:none!important}
+#tiers-m{display:none}
+#tiers-m .tm-tabs{display:grid;grid-template-columns:repeat(auto-fit,minmax(70px,1fr));gap:6px;margin-bottom:12px}
+#tiers-m .tm-tabs button{border:1.5px solid var(--line);background:#fff;border-radius:8px;padding:10px 4px;cursor:pointer;display:grid;gap:2px;font:inherit;color:var(--ink)}
+#tiers-m .tm-tabs button b{font:800 18px/1 var(--display)}#tiers-m .tm-tabs button span{font-size:12px;color:var(--muted)}
+#tiers-m .tm-tabs button[aria-selected="true"]{border-color:var(--signal);background:#fff1e6}
+#tiers-m .tm-body{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px}
+#tiers-m .tm-price{font:800 28px/1 var(--display);color:var(--navy);margin-bottom:12px}
+#tiers-m .limited{font:600 12px var(--text);background:var(--abyss);color:#fff;border-radius:99px;padding:3px 9px;vertical-align:middle}
+#tiers-m ul{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:9px}
+#tiers-m li{display:grid;grid-template-columns:22px 1fr;gap:10px;font-size:15px;align-items:start}#tiers-m li.off{color:#9aaab8}
+#tiers-m .yes{width:20px;height:20px;border-radius:50%;background:var(--navy);position:relative;margin-top:2px}
+#tiers-m .yes:after{content:"";position:absolute;left:7px;top:4px;width:5px;height:10px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+#tiers-m .no{width:12px;height:2px;background:#c3d1dc;margin:10px 4px 0}
+#tiers-m .btn{width:100%;justify-content:center}
+@media (max-width:760px){
+  #tiers-m{display:block}.tiers-wrap{display:none}
+  section{padding:52px 0}.lead{margin:12px 0 26px}
+  .hero figure{aspect-ratio:16/10}.hero .copy{padding-bottom:40px}.countdown{margin-top:28px}
+  .race-stats{margin-bottom:40px}.race-stats b{font-size:38px}
+  .fleet,.team,.why{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin-left:-20px;margin-right:-20px;padding:0 20px 8px;scrollbar-width:none}
+  .fleet::-webkit-scrollbar,.team::-webkit-scrollbar,.why::-webkit-scrollbar{display:none}
+  .fleet>*,.team>*,.why>*{flex:0 0 84%;scroll-snap-align:center}
+  .unit .b{padding:18px}.unit img{aspect-ratio:16/9}
+  .glossary{margin-top:44px}.terms summary{font-size:20px;padding:14px 0}
+  .reel{padding-bottom:52px}.reel .head{padding-top:52px}.track figure{height:240px}.video{margin-top:32px}
+  .crew-head{margin-bottom:20px}.crew-head img{max-height:200px}
+  .social{margin-top:40px}.social .pics{display:none}.social .b{padding:24px}
+  .budget{gap:28px}.lines li{padding:12px 0}.lines .d{font-size:13px}.equiv li{grid-template-columns:86px 1fr;padding:10px 14px}.equiv li b{font-size:20px}
+  .why{margin-bottom:44px}.why>div{padding:22px}
+  .mecenat-txt{margin-top:40px;padding:24px}
+  .sim{margin-top:44px}.panel{padding:18px;gap:12px}.spots{grid-template-columns:1fr 1fr 1fr}.spots label{padding:8px;font-size:14px}
+  .logos{grid-template-columns:1fr 1fr;gap:10px}.logos .sp{padding:14px}.logos .mark{height:60px}.logos .sp-name{font-size:17px}.logos small{flex-direction:column;gap:2px;font-size:12px}
+  .next{margin-top:36px;padding-top:24px}
+  .contact .w{gap:20px}.steps{margin-bottom:20px}
+}
+@media (max-width:760px){
+  .lines .d{display:none}.lines li{grid-template-columns:30px 1fr auto;padding:10px 0}.lines .v{font-size:20px}
+  .equiv ul{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;margin:14px -20px 0;padding:0 20px 6px;scrollbar-width:none}.equiv li{flex:0 0 70%;scroll-snap-align:center}
+  .glossary .intro p,.src{display:none}.race-stats{margin-bottom:28px}
+  #tiers-m li.off{display:none}
+  .steps{display:none}.contact .lead{margin-bottom:16px}
+  form{gap:10px;padding:18px}form textarea{min-height:70px}
+  .crew-head img{display:none}
+  .reel .head{padding-top:40px}.track figure{height:210px}
+  .fleet>*,.team>*,.why>*{flex-basis:80%}
+}
+.budget>*,.glossary>*,.sim>*,.contact .w>*{min-width:0}
+.ecole h2{margin-bottom:14px}.facts{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:0}.facts li{background:var(--foam);color:var(--navy);border-radius:99px;padding:6px 14px;font-weight:600;font-size:14px}
+.vgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:24px 0 64px}
+.val{font:inherit;text-align:left;border:1.5px solid var(--line);background:#fff;border-radius:10px;padding:22px 20px;min-height:150px;display:grid;align-content:space-between;gap:12px;cursor:pointer;color:var(--ink);transition:background .2s,color .2s}
+.val b{font:800 26px/1 var(--display)}.val span{font-size:14px;opacity:0;transform:translateY(6px);transition:.2s}
+.val:hover,.val:focus-visible,.val.open{background:var(--navy);color:#fff;border-color:var(--navy)}.val:hover span,.val:focus-visible span,.val.open span{opacity:1;transform:none}
+@media(hover:none){.val span{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<nav aria-label="Navigation principale" class="nav" id="nav">
+<div class="w">
+<a aria-label="Icam Voile Lille, retour en haut de page" class="brand" href="#top">
+<img alt="Logo Icam Voile Lille" height="58" src="assets/img/logo.webp" width="58"/>
+<span><b data-edit="nav.b1">Icam Voile Lille</b><small data-edit="nav.small2">Course Croisière EDHEC 2027</small></span>
+</a>
+<a aria-label="Icam, notre école d'ingénieurs" class="school" href="https://www.icam.fr/" rel="noopener" target="_blank"><img alt="Icam" src="assets/img/icam.png"/></a>
+<button aria-controls="links" aria-expanded="false" aria-label="Ouvrir le menu" class="burger" id="burger"><span></span><span></span><span></span></button>
+<div class="links" id="links">
+<a data-edit="nav.a4" href="#equipe">Équipe</a>
+<a data-edit="nav.a3" href="#projet">Projet</a>
+<a data-edit="nav.a5" href="#budget">Budget</a>
+<a data-edit="nav.a6" href="#offres">Offres de partenariat</a>
+<a data-edit="nav.a7" href="#sponsors">Nos sponsors</a>
+<a data-edit="nav.a8" href="#contact">Contact</a>
+<a aria-label="Icam Voile sur Instagram" class="ig" data-ig="" href="#" rel="noopener" target="_blank"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><rect height="18" rx="5" width="18" x="3" y="3"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" fill="currentColor" r="1"></circle></svg></a>
+<a class="btn" data-edit="nav.a9" href="#contact">Devenir partenaire</a>
+</div>
+</div>
+</nav>
+<header class="hero" id="top">
+<div class="w">
+<div class="copy">
+<div class="where" data-blk="blk.top.1" data-edit="top.div1">Course Croisière EDHEC, 59e édition, Les Sables d'Olonne</div>
+<h1 data-blk="blk.top.2" data-edit="top.h12">Représenter l'Icam face aux plus grands.</h1>
+<p data-blk="blk.top.3" data-edit="top.p3">18 élèves ingénieurs de l'Icam Lille, deux voiliers de course et une Équipe Terre. Nous nous préparons toute l'année, en mer comme à terre, pour représenter l'école à la plus grande compétition sportive étudiante d'Europe et nous faire une place parmi les grandes écoles et les skippers professionnels.</p>
+<div class="ctas" data-blk="blk.top.4">
+<a class="btn" data-blk="blk.top.5" data-edit="top.a4" href="#contact">Construire cette victoire avec nous</a>
+<a class="btn ghost" data-blk="blk.top.6" data-edit="top.a5" href="#offres">Voir les formules</a>
+</div>
+<div aria-live="off" class="countdown" data-blk="blk.top.7" id="countdown">
+<div><b data-cd="d">000</b><span>jours</span></div>
+<div><b data-cd="h">00</b><span>heures</span></div>
+<div><b data-cd="m">00</b><span>minutes</span></div>
+<div class="lbl" data-edit="top.div6">avant le premier jour de course, le 10 avril 2027</div>
+</div>
+</div>
+<figure data-blk="blk.top.8"><img alt="Équipage en rappel sur un J80 en pleine régate" data-img="img.top.1" fetchpriority="high" src="assets/img/hero.webp"/></figure>
+</div>
+</header>
+<!-- ===================== PROJET ===================== -->
+<section id="equipe">
+<div class="w">
+<div class="ecole" id="ecole" data-blk="blk.ecole.1">
+<h2 data-blk="blk.ecole.2" data-edit="ecole.h21">Notre école : l'Icam</h2>
+<ul class="facts" data-blk="blk.ecole.3"><li data-edit="ecole.li1">Depuis 1898</li><li data-edit="ecole.li2">Ingénieurs généralistes</li><li data-edit="ecole.li3">14 écoles dans le monde, dont 7 en France</li><li data-edit="ecole.li4">Expérimenter, Relire, Discerner</li></ul>
+<div class="vgrid" data-blk="blk.ecole.4">
+<button class="val" type="button" onclick="this.classList.toggle('open')"><b data-edit="ecole.b1">Audace</b><span data-edit="ecole.s1">Oser, entreprendre, expérimenter</span></button>
+<button class="val" type="button" onclick="this.classList.toggle('open')"><b data-edit="ecole.b2">Savoir-faire</b><span data-edit="ecole.s2">Terrain, atelier, projets concrets</span></button>
+<button class="val" type="button" onclick="this.classList.toggle('open')"><b data-edit="ecole.b3">Collectif</b><span data-edit="ecole.s3">Solidarité, réussite collective, vie de campus</span></button>
+<button class="val" type="button" onclick="this.classList.toggle('open')"><b data-edit="ecole.b4">Responsabilité</b><span data-edit="ecole.s4">L'humain au cœur, engagement sociétal et environnemental</span></button>
+</div></div>
+<div class="crew-head">
+<div>
+<h2 data-blk="blk.equipe.1" data-edit="equipe.h21">L'Équipe</h2>
+<p class="lead" data-blk="blk.equipe.2" data-edit="equipe.p2" style="margin-bottom:0">18 élèves ingénieurs, des rôles définis, un entraînement structuré. Chacun sait pourquoi il est là.</p>
+</div>
+<img alt="L'équipage Icam Voile Lille au complet" data-blk="blk.equipe.3" data-img="img.equipe.13" loading="lazy" src="assets/img/crew.webp"/>
+</div>
+<div id="team"></div>
+<div class="social" data-blk="blk.equipe.4">
+<div class="b">
+<h3 data-blk="blk.equipe.5" data-edit="equipe.h33">Suivez la campagne en direct</h3>
+<p data-blk="blk.equipe.6" data-edit="equipe.p4">Entraînements, préparation du bateau, coulisses et résultats : nos partenaires sont mis en avant à chaque étape.</p>
+<div class="followers">
+<div><b data-count="ig">0</b><span data-edit="equipe.span5">abonnés Instagram</span></div>
+<div><b data-count="li">0</b><span data-edit="equipe.span6">relations LinkedIn</span></div>
+</div>
+<div class="goal"><div class="bar"><i id="goalbar"></i></div><small id="goaltxt"></small></div>
+<a class="btn" data-blk="blk.equipe.7" data-edit="equipe.a7" data-ig="" href="#" rel="noopener" target="_blank">Suivre @icam_voile sur Instagram</a>
+</div>
+<div class="pics">
+<img alt="" data-img="img.equipe.14" loading="lazy" src="assets/img/g15.webp"/><img alt="" data-img="img.equipe.15" loading="lazy" src="assets/img/g04.webp"/>
+<img alt="" data-img="img.equipe.16" loading="lazy" src="assets/img/g17.webp"/><img alt="" data-img="img.equipe.17" loading="lazy" src="assets/img/g16.webp"/>
+</div>
+</div>
+</div>
+</section>
+<!-- ===================== BUDGET ===================== -->
+<section id="projet">
+<div class="w">
+<h2 data-blk="blk.projet.1" data-edit="projet.h21">Une régate exigeante, un projet sérieux</h2>
+<p class="lead" data-blk="blk.projet.2" data-edit="projet.p2">La Course Croisière EDHEC (CCE) est disputée chaque année depuis 1969, au calendrier de la Fédération Française de Voile. Une semaine de manches en mer et d'épreuves à terre, face aux meilleures écoles d'Europe.</p>
+<div class="race-stats">
+<div data-blk="blk.projet.3"><b data-edit="projet.b3" data-n="2500">2 500</b><span data-edit="projet.span4">compétiteurs</span></div>
+<div data-blk="blk.projet.4"><b data-edit="projet.b5" data-n="150">150</b><span data-edit="projet.span6">écoles engagées</span></div>
+<div data-blk="blk.projet.5"><b data-edit="projet.b7" data-n="12000">12 000</b><span data-edit="projet.span8">visiteurs sur le village</span></div>
+<div data-blk="blk.projet.6"><b data-edit="projet.b9" data-n="9">9</b><span data-edit="projet.span10">jours de compétition</span></div>
+</div>
+<p class="src" data-blk="blk.projet.7" data-edit="projet.p11">Chiffres de l'édition 2026 communiqués par l'organisation. Sources : <a href="https://www.edhec.edu/en/associations/course-croisiere-edhec" rel="noopener" target="_blank">EDHEC Business School</a>, <a href="https://www.helloasso.com/associations/course-croisiere-edhec" rel="noopener" target="_blank">Course Croisière EDHEC</a>.</p>
+<h3 data-blk="blk.projet.8" data-edit="projet.h312" style="font-size:clamp(28px,3vw,40px);font-weight:800;margin-bottom:24px">Trois équipes, un seul objectif</h3>
+<div class="fleet">
+<article class="unit" data-blk="blk.projet.9">
+<img alt="J80 au près, équipage au rappel" data-img="img.projet.2" loading="lazy" src="assets/img/g06.webp"/>
+<div class="b">
+<div class="k" data-blk="blk.projet.10" data-edit="projet.div13">Défi Mer, sprint</div>
+<h3 data-blk="blk.projet.11" data-edit="projet.h314">Le J80</h3>
+<p data-blk="blk.projet.12" data-edit="projet.p15">Un voilier monotype de 8 mètres, rapide et très exigeant. Tous les bateaux sont identiques : seule la performance de l'équipage fait la différence. 5 équipiers à bord.</p>
+</div>
+</article>
+<article class="unit" data-blk="blk.projet.13">
+<img alt="Voilier habitable en tête de flotte" data-img="img.projet.3" loading="lazy" src="assets/img/g13.webp"/>
+<div class="b">
+<div class="k" data-blk="blk.projet.14" data-edit="projet.div16">Défi Mer, course au large</div>
+<h3 data-blk="blk.projet.15" data-edit="projet.h317">Le voilier habitable</h3>
+<p data-blk="blk.projet.16" data-edit="projet.p18">Un voilier de course-croisière de 38 à 40 pieds (11,5 à 12 mètres). Manches côtières plus longues, stratégie, navigation et endurance. Notre équipage le plus nombreux.</p>
+</div>
+</article>
+<article class="unit terre" data-blk="blk.projet.17">
+<img alt="Équipier préparant une voile sur le pont" data-img="img.projet.4" loading="lazy" src="assets/img/g31.webp"/>
+<div class="b">
+<div class="k" data-blk="blk.projet.18" data-edit="projet.div19">Équipe Terre, base arrière</div>
+<h3 data-blk="blk.projet.19" data-edit="projet.h320">L'Équipe Terre</h3>
+<p data-blk="blk.projet.20" data-edit="projet.p21">Sans elle, aucun bateau ne prend le départ. Elle dispute aussi le Défi Terre (trail, canoë, run and bike).</p>
+<ul data-blk="blk.projet.21">
+<li data-blk="blk.projet.22" data-edit="projet.li22">Logistique : transport, hébergement, ravitaillement de l'équipage</li>
+<li data-blk="blk.projet.23" data-edit="projet.li23">Préparation technique des voiles, du matériel et de la sécurité</li>
+<li data-blk="blk.projet.24" data-edit="projet.li24">Gestion à terre pendant la course : météo, réparations, relais avec les partenaires</li>
+</ul>
+</div>
+</article>
+</div>
+<div class="glossary">
+<div class="intro" data-blk="blk.projet.25">
+<h3 data-blk="blk.projet.26" data-edit="projet.h325" style="font-size:clamp(28px,3vw,40px);font-weight:800;margin-bottom:14px">Le vocabulaire de la course</h3>
+<p data-blk="blk.projet.27" data-edit="projet.p26">Pas besoin d'être marin pour nous soutenir. Voici les termes que vous croiserez sur ce site.</p>
+</div>
+<div class="terms">
+<details data-blk="blk.projet.28" open=""><summary data-edit="projet.summary27">J80 <small>voilier monotype</small></summary><div class="def"><p data-blk="blk.projet.29" data-edit="projet.p28">Voilier de course de 8 mètres conçu par J/Boats, l'une des séries monotypes les plus répandues au monde. « Monotype » signifie que tous les bateaux sont strictement identiques : la victoire se joue sur la technique, la tactique et la cohésion de l'équipage.</p></div></details>
+<details data-blk="blk.projet.30"><summary data-edit="projet.summary29">Habitable <small>voilier de 38 à 40 pieds</small></summary><div class="def"><p data-blk="blk.projet.31" data-edit="projet.p30">Voilier de course-croisière de 38 à 40 pieds, soit environ 11,5 à 12 mètres. Plus grand et plus puissant que le J80, il dispute des parcours côtiers plus longs avec un équipage élargi.</p></div></details>
+<details data-blk="blk.projet.32"><summary data-edit="projet.summary31">Licence FFV <small>Fédération Française de Voile</small></summary><div class="def"><p data-blk="blk.projet.33" data-edit="projet.p32">Licence délivrée par la Fédération Française de Voile, obligatoire pour courir en compétition officielle. Elle inclut l'assurance et valide l'inscription de chaque équipier au classement.</p></div></details>
+<details data-blk="blk.projet.34"><summary data-edit="projet.summary33">Équipier réserviste <small>remplaçant</small></summary><div class="def"><p data-blk="blk.projet.35" data-edit="projet.p34">Équipier entraîné et licencié, prêt à embarquer à tout moment en cas de blessure ou d'indisponibilité. Il suit le même programme d'entraînement que l'équipage titulaire et garantit que nos deux bateaux prennent chaque départ au complet.</p></div></details>
+<details data-blk="blk.projet.36"><summary data-edit="projet.summary35">Grand-voile, foc, spinnaker <small>les voiles</small></summary><div class="def"><p data-blk="blk.projet.37" data-edit="projet.p36">La grand-voile est la voile principale, fixée au mât et à la bôme. Le foc est la voile d'avant du J80 pour remonter au vent. Au portant, l'équipage envoie le spinnaker, la grande voile ballon que vous voyez en bleu sur notre vidéo. Sur un voilier habitable, la voile d'avant peut être un génois, plus grand que le foc.</p></div></details>
+</div>
+</div>
+</div>
+</section>
+<!-- ===================== GALERIE ===================== -->
+<div aria-label="Photos de l'équipage en course" class="reel" id="galerie">
+<div class="w head">
+<h2 data-blk="blk.galerie.1" data-edit="galerie.h21">En course</h2>
+<div class="ctrl"><button aria-label="Photo précédente" id="prev" type="button">‹</button><button aria-label="Photo suivante" id="next" type="button">›</button></div>
+</div>
+<div class="track" id="track">
+<figure data-blk="blk.galerie.2"><img alt="Départ de flotte J80" data-img="img.galerie.5" loading="lazy" src="assets/img/g04.webp"/><figcaption data-edit="galerie.figcaption2">Départ groupé en J80</figcaption></figure>
+<figure data-blk="blk.galerie.3"><img alt="Équipage au réglage du spinnaker" data-img="img.galerie.6" loading="lazy" src="assets/img/g15.webp"/><figcaption data-edit="galerie.figcaption3">Réglage du spinnaker</figcaption></figure>
+<figure data-blk="blk.galerie.4"><img alt="Équipier en ciré au winch dans la mer formée" data-img="img.galerie.7" loading="lazy" src="assets/img/g17.webp"/><figcaption data-edit="galerie.figcaption4">Au winch dans la mer formée</figcaption></figure>
+<figure data-blk="blk.galerie.5"><img alt="Vue aérienne du voilier sous voiles" data-img="img.galerie.8" loading="lazy" src="assets/img/g16.webp"/><figcaption data-edit="galerie.figcaption5">Au près, vu du ciel</figcaption></figure>
+<figure data-blk="blk.galerie.6"><img alt="Équipage en manœuvre sur le pont" data-img="img.galerie.9" loading="lazy" src="assets/img/g33.webp"/><figcaption data-edit="galerie.figcaption6">Manœuvre d'équipage</figcaption></figure>
+<figure data-blk="blk.galerie.7"><img alt="Barreur concentré par mer agitée" data-img="img.galerie.10" loading="lazy" src="assets/img/g23.webp"/><figcaption data-edit="galerie.figcaption7">À la barre</figcaption></figure>
+<figure data-blk="blk.galerie.8"><img alt="Voilier habitable lancé à pleine vitesse" data-img="img.galerie.11" loading="lazy" src="assets/img/g11.webp"/><figcaption data-edit="galerie.figcaption8">Bord de largue</figcaption></figure>
+<figure data-blk="blk.galerie.9"><img alt="Vue aérienne du voilier qui gîte" data-img="img.galerie.12" loading="lazy" src="assets/img/g22.webp"/><figcaption data-edit="galerie.figcaption9">Sous génois</figcaption></figure>
+</div>
+<div class="w video" data-blk="blk.galerie.10" id="video">
+<h3 data-blk="blk.video.1" data-edit="video.h31" style="margin-bottom:6px">La CCE en vidéo</h3>
+<p data-blk="blk.video.2" data-edit="video.p2" style="color:#b8cadb;margin:0 0 18px">Bande-annonce de la 51e Course Croisière EDHEC.</p>
+<div class="yt" data-blk="blk.video.3"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/BNgGzrUfmxU?rel=0" title="Bande-annonce de la 51e Course Croisière EDHEC"></iframe></div>
+</div>
+</div>
+<!-- ===================== EQUIPE ===================== -->
+<section class="dark" id="budget">
+<div class="w">
+<h2 data-blk="blk.budget.1" data-edit="budget.h21">Budget prévisionnel</h2>
+<p class="lead" data-blk="blk.budget.2" data-edit="budget.p2">Un budget construit poste par poste pour engager deux bateaux compétitifs. Transport, hébergement, repas et soirées restent à la charge des étudiants.</p>
+<div class="budget">
+<div>
+<div class="totals">
+<div><b id="tot">0 €</b><span data-edit="budget.span3">budget de la campagne</span></div>
+<div><b id="got">0 €</b><span data-edit="budget.span4">déjà financé</span></div>
+<div class="need"><b id="need">0 €</b><span data-edit="budget.span5">à financer par nos partenaires</span></div>
+</div>
+<div class="gauge"><i id="gauge"></i></div>
+<ol class="lines" id="lines"></ol>
+</div>
+<div class="equiv" data-blk="blk.budget.3">
+<h3 data-blk="blk.budget.4" data-edit="budget.h36">Votre soutien, concrètement</h3>
+<p data-blk="blk.budget.5" data-edit="budget.p7">Chaque euro est affecté à un poste identifié. Un bilan financier est envoyé à chaque partenaire après la course.</p>
+<ul id="equiv"></ul>
+</div>
+</div>
+</div>
+</section>
+<!-- ===================== OFFRES ===================== -->
+<section id="offres">
+<div class="w">
+<h2 data-blk="blk.offres.1" data-edit="offres.h21">Ce que votre entreprise y gagne</h2>
+<p class="lead" data-blk="blk.offres.2" data-edit="offres.p2">Un partenariat avec Icam Voile, c'est d'abord un levier de marque employeur auprès des ingénieurs que vous recruterez demain.</p>
+<div class="why">
+<div class="main" data-blk="blk.offres.3">
+<h3 data-blk="blk.offres.4" data-edit="offres.h33">Marque employeur</h3>
+<ul>
+<li data-blk="blk.offres.5" data-edit="offres.li4"><b>Intervention de l'équipage dans votre entreprise</b> : témoignage sur la performance, la préparation et la prise de décision sous pression.</li>
+<li data-blk="blk.offres.6" data-edit="offres.li5"><b>Cohésion d'équipe</b> : un récit concret de dépassement de soi à partager avec vos collaborateurs.</li>
+<li data-blk="blk.offres.7" data-edit="offres.li6"><b>Accès direct aux futurs diplômés de l'Icam</b> : diffusion de vos offres de stage, d'alternance et d'emploi, rencontres sur le campus.</li>
+</ul>
+</div>
+<div data-blk="blk.offres.8">
+<h3 data-blk="blk.offres.9" data-edit="offres.h37">Retombées médias</h3>
+<ul>
+<li data-blk="blk.offres.10" data-edit="offres.li8"><b>Presse</b> : communiqués vers la presse régionale du Nord et de Vendée, avant et après la course.</li>
+<li data-blk="blk.offres.11" data-edit="offres.li9"><b>Réseaux sociaux</b> : publications, stories et vlogs pendant toute la campagne.</li>
+<li data-blk="blk.offres.12" data-edit="offres.li10"><b>Événements</b> : village de la CCE, forums entreprises de l'Icam, soirée partenaires.</li>
+</ul>
+</div>
+<div data-blk="blk.offres.13">
+<h3 data-blk="blk.offres.14" data-edit="offres.h311">Des valeurs partagées</h3>
+<ul>
+<li data-blk="blk.offres.15" data-edit="offres.li12"><b>Performance</b> : un objectif de résultat, un plan d'entraînement.</li>
+<li data-blk="blk.offres.16" data-edit="offres.li13"><b>Engagement</b> : un projet porté de A à Z par des étudiants.</li>
+<li data-blk="blk.offres.17" data-edit="offres.li14"><b>Rigueur</b> : budget suivi, reporting à nos partenaires.</li>
+</ul>
+</div>
+</div>
+<div id="formules-bloc">
+<h2 data-blk="blk.formules-bloc.1" data-edit="formules-bloc.h21" id="formules">Nos formules de partenariat</h2>
+<p class="lead" data-blk="blk.formules-bloc.2" data-edit="formules-bloc.p2">Chaque formule inclut les contreparties de la précédente. Cliquez sur une formule pour la mettre en évidence.</p>
+<div id="tiers-m"></div>
+<div class="tiers-wrap">
+<table class="tiers" id="tiers">
+<thead><tr><th scope="col"><span style="font-weight:600;color:var(--muted);font-size:14px">Contreparties</span></th></tr></thead>
+<tbody></tbody>
+<tfoot><tr><td></td></tr></tfoot>
+</table>
+</div>
+<p class="tier-note" data-blk="blk.formules-bloc.3" data-edit="formules-bloc.p3">Logo sur coque : marquage adhésif amovible, posé avec l'accord du loueur des bateaux.<br>Vous préférez un don ? Il est défiscalisable dans le cadre du mécénat, contactez-nous pour échanger ensemble.<br>Une autre idée, un apport en nature (impression, transport, matériel) ? Construisons une formule sur mesure !</p>
+</div>
+<div class="filters" id="simtabs" role="group" aria-label="Choisir la simulation" style="margin-top:64px"><button type="button" data-t="bateau" aria-pressed="true">Votre logo sur le bateau</button><button type="button" data-t="veste" aria-pressed="false">Votre logo sur la veste de quart</button></div>
+<div id="simveste" hidden><iframe src="assets/simulateur-veste.html" title="Simulateur de logo sur la veste de quart" loading="lazy" allow="clipboard-write" style="width:100%;height:860px;border:1px solid var(--line);border-radius:12px"></iframe></div>
+<div class="sim" id="simulateur">
+<div class="stage">
+<div class="screen">
+<canvas aria-label="Vidéo d'un J80 en navigation avec votre logo intégré sur la grand-voile, le spinnaker et la coque" height="720" id="simcv" role="img" width="1280"></canvas>
+<video aria-hidden="true" id="simvid" loop="" muted="" playsinline="" preload="auto" src="assets/j80.mp4"></video>
+<div class="simload" id="simload">Chargement de la vidéo...</div>
+</div>
+<div class="simbar">
+<button aria-label="Mettre en pause" id="simplay" type="button">❚❚</button>
+<input aria-label="Position dans la vidéo" id="simseek" max="733" min="0" type="range" value="0"/>
+<span id="simtc">0,0 s</span>
+</div>
+</div>
+<div class="panel">
+<h3 data-blk="blk.simulateur.1" data-edit="simulateur.h31">Votre logo sur notre J80, en mouvement</h3>
+<p class="sim-intro" data-blk="blk.simulateur.2" data-edit="simulateur.p2">Indiquez le site de votre entreprise : nous retrouvons votre logo et l'intégrons sur le voilier en pleine navigation.</p>
+<form class="field" id="simform" novalidate="">
+<label for="simdom">Site de votre entreprise</label>
+<div class="domrow"><input autocomplete="url" id="simdom" inputmode="url" placeholder="votre-entreprise.fr" spellcheck="false" type="text"/><button class="btn" type="submit">Afficher</button></div>
+</form>
+<div class="field upl">
+<label><input accept="image/png,image/svg+xml,image/jpeg,image/webp,.png,.svg,.jpg,.jpeg,.webp" id="simfile" type="file"/>Ou importer mon logo</label>
+<span data-edit="simulateur.span3">PNG ou SVG, fond transparent de préférence</span>
+</div>
+<div class="logo-prev" hidden="" id="simpreview"><img alt="Aperçu du logo utilisé" id="simthumb"/><span id="simsrc"></span></div>
+<div class="field">
+<fieldset>
+<legend data-edit="simulateur.legend4">Emplacements</legend>
+<div class="spots">
+<label><input checked="" type="checkbox" value="main"/>Grand-voile</label>
+<label><input checked="" type="checkbox" value="spin"/>Spinnaker</label>
+<label><input checked="" type="checkbox" value="hull"/>Coque</label>
+</div>
+</fieldset>
+<label class="tg"><input id="simwhite" type="checkbox"/>Logo en blanc sur le spinnaker</label>
+</div>
+<p aria-live="polite" data-blk="blk.simulateur.3" id="simmsg" role="status"></p>
+<div class="row">
+<button class="btn ghost" data-edit="simulateur.button5" id="simshot" type="button">Télécharger une image</button>
+<button class="btn ghost" data-edit="simulateur.button6" id="simrec" type="button">Enregistrer la vidéo</button>
+</div>
+<a class="btn" data-edit="simulateur.a7" data-pick="Skipper" href="#contact" style="justify-content:center">Réserver mon emplacement</a>
+<p class="sim-note" data-blk="blk.simulateur.4" data-edit="simulateur.p8">Le logo épouse la courbure et les plis des voiles grâce à un suivi 3D de la vidéo réalisé à l'avance, puis calculé en temps réel dans votre navigateur : aucun fichier n'est envoyé. Sur cette vidéo, le J80 navigue au portant sous spinnaker, foc enroulé. Vidéo : J80, North Sails.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- ===================== SPONSORS ===================== -->
+<section class="dark" id="sponsors">
+<div class="w">
+<h2 data-blk="blk.sponsors.1" id="sp-title">Ils nous ont fait confiance</h2>
+<p class="lead" data-blk="blk.sponsors.2" data-edit="sponsors.p1">Merci aux entreprises qui ont soutenu nos participations à la Course Croisière EDHEC.</p>
+<div class="logos" id="logos"></div>
+<div class="next" data-blk="blk.sponsors.3">
+<p data-blk="blk.sponsors.4" data-edit="sponsors.p2">Et si la prochaine édition portait vos couleurs ?</p>
+<a class="btn" data-blk="blk.sponsors.5" data-edit="sponsors.a3" href="#contact">Rejoindre nos partenaires 2027</a>
+</div>
+</div>
+</section>
+<!-- ===================== CONTACT ===================== -->
+<section class="contact" data-bg="bg.contact" id="contact" style="background-image:url(assets/img/g13.webp)">
+<div class="w">
+<div>
+<h2 data-blk="blk.contact.1" data-edit="contact.h21">Et si nous construisions notre prochaine victoire ensemble ?</h2>
+<p class="lead" data-blk="blk.contact.2" data-edit="contact.p2">Rencontrons-nous pour échanger sur vos objectifs de marque employeur. Réponse sous 48 heures ouvrées.</p>
+<ol class="steps">
+<li data-blk="blk.contact.3" data-edit="contact.li3">Un premier échange de 20 minutes pour comprendre vos objectifs.</li>
+<li data-blk="blk.contact.4" data-edit="contact.li4">Une proposition de formule adaptée : sponsoring, mécénat ou sur mesure.</li>
+<li data-blk="blk.contact.5" data-edit="contact.li5">Une convention de partenariat, puis l'activation de vos contreparties et un bilan après la course.</li>
+</ol>
+<p class="person" data-blk="blk.contact.6" data-edit="contact.p6"><b>Timothée Stevens</b>, président d'Icam Voile Lille<br/>
+<a href="tel:+33766882361">+33 7 66 88 23 61</a><br/>
+<a href="mailto:timothee.stevens@2028.icam.fr">timothee.stevens@2028.icam.fr</a></p>
+</div>
+<form id="f" novalidate="">
+<label>Prénom *<input autocomplete="given-name" name="prenom" required=""/></label>
+<label>Nom *<input autocomplete="family-name" name="nom" required=""/></label>
+<label class="f">Entreprise ou organisation *<input autocomplete="organization" name="ent" required=""/></label>
+<label>Fonction<input autocomplete="organization-title" name="fonction"/></label>
+<label>Téléphone<input autocomplete="tel" name="tel" type="tel"/></label>
+<label class="f">E-mail professionnel *<input autocomplete="email" inputmode="email" name="mail" required="" type="email"/></label>
+<label>Type de soutien<select name="type"><option>Sponsoring (formule)</option><option>Mécénat (don avec réduction d'impôt)</option><option>Soutien en nature</option><option>Formule sur mesure</option></select></label>
+<label>Formule envisagée<select id="formule" name="formule"><option>Je ne sais pas encore</option></select></label>
+<label class="f">Votre objectif<textarea name="message" placeholder="Marque employeur, visibilité, recrutement, cohésion d'équipe..." rows="3"></textarea></label>
+<input aria-hidden="true" autocomplete="off" name="website" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" tabindex="-1" type="text"/>
+<label class="chk f"><input name="rgpd" required="" type="checkbox"/>J'accepte que ces informations soient utilisées par Icam Voile Lille pour me recontacter au sujet de ce partenariat.</label>
+<div class="f"><button class="btn" type="submit">Planifier un échange</button></div>
+<p aria-live="polite" id="msg" role="status"></p>
+</form>
+</div>
+</section>
+<footer>
+<div class="w">
+<img alt="" class="logo" src="assets/img/logo.webp"/>
+<div><span data-edit="footer.span1">Icam Voile Lille, association des élèves ingénieurs de l'Icam</span><br/><span data-edit="footer.span2">Course Croisière EDHEC 2027, Les Sables d'Olonne</span><br/><a data-ig="" href="#" rel="noopener" target="_blank">Instagram</a></div>
+<span class="sp"></span>
+<img alt="Icam" class="partner" src="assets/img/icam.png" style="padding:8px 10px"/>
+<img alt="Course Croisière EDHEC" class="partner" src="assets/img/cce.webp"/>
+<img alt="Fédération Française de Voile" class="partner" src="assets/img/ffv.webp"/>
+</div>
+</footer>
+<script>
+var DEFAULTS={"team": [{"prenom": "Timothée", "nom": "Stevens", "role": "Président", "team": "Bureau", "origine": "", "motivation": "", "photo": ""}, {"prenom": "", "nom": "", "role": "Skipper habitable", "team": "Habitable", "origine": "", "motivation": "", "photo": ""}, {"prenom": "", "nom": "", "role": "Skipper J80", "team": "J80", "origine": "", "motivation": "", "photo": ""}, {"prenom": "", "nom": "", "role": "Trésorier", "team": "Bureau", "origine": "", "motivation": "", "photo": ""}, {"prenom": "", "nom": "", "role": "Responsable partenariats", "team": "Bureau", "origine": "", "motivation": "", "photo": ""}, {"prenom": "", "nom": "", "role": "Responsable communication", "team": "Bureau", "origine": "", "motivation": "", "photo": ""}, {"prenom": "", "nom": "", "role": "Tacticien", "team": "Habitable", "origine": "", "motivation": "", "photo": ""}, {"prenom": "", "nom": "", "role": "Équipier d'avant", "team": "J80", "origine": "", "motivation": "", "photo": ""}, {"prenom": "", "nom": "", "role": "Chef de l'Équipe Terre", "team": "Équipe Terre", "origine": "", "motivation": "", "photo": ""}, {"prenom": "", "nom": "", "role": "Préparation technique et voilerie", "team": "Équipe Terre", "origine": "", "motivation": "", "photo": ""}, {"prenom": "", "nom": "", "role": "Équipier réserviste", "team": "Habitable", "origine": "", "motivation": "", "photo": ""}], "budget": {"already": 0, "lines": [{"label": "Location des voiliers", "amount": 5000, "detail": "Pour une semaine, location d'un OSIRIS (~3000 €) et J80 (~2 000 €)"}, {"label": "Inscriptions à la CCE", "amount": 4900, "detail": "Inscription Défi Mer 3 380 € (13 personnes), Défi Terre 1000 € (5 personnes) et des 2 bateaux 520 €"}, {"label": "Vestes de quart", "amount": 3600, "detail": "18 vestes de quart, portées toute la CCE et régulierement par la suite, floquées au couleur des partenaires (200 € l'unité)"}, {"label": "2 Week-ends d'entraînement", "amount": 1200, "detail": "2 week-end en mer pour apprendre à naviguer ensemble : location du bateau, port, carburant (600 € par week-end))"}, {"label": "Logistique", "amount": 1150, "detail": "Transports (600 €), Alimentation (500 €), Gasoil (50 €)"}, {"label": "Marquage, broderie et stickers", "amount": 1000, "detail": "Drapeaux parternaires / Stickers sur voiles / Marquage sur coque / Flocage vestes / Broderie polaires"}, {"label": "Assurance", "amount": 1000, "detail": "Assurance (100 €), Rachat de caution (400 €) et Imprévus (500 €)"}, {"label": "Licences FFV", "amount": 949, "detail": "13 licences de la Fédération Française de Voile (73 € l'unité)"}], "equiv": [{"amount": 73, "label": "une licence FFV"}, {"amount": 200, "label": "une veste de quart floquée"}, {"amount": 260, "label": "l'inscription d'un équipier en régate"}, {"amount": 600, "label": "un week-end d'entraînement en mer"}, {"amount": 3000, "label": "la location du voilier OSIRIS d'environ 35 pieds"}]}, "sponsors": [{"name": "Les Toits du Nord", "year": 2026, "url": "", "domain": "", "logo": ""}, {"name": "Aires d'entreprises", "year": 2026, "url": "", "domain": "", "logo": ""}, {"name": "Deloitte", "year": 2026, "url": "https://www.deloitte.com/fr/fr.html", "domain": "deloitte.com", "logo": ""}], "social": {"instagramUrl": "https://www.instagram.com/icam_voile/", "followers": 1400, "goal": 2000, "linkedin": 500}, "tiers": [{"id": "Matelot", "price": 500}, {"id": "Équipier", "price": 1000}, {"id": "Barreur", "price": 3000}, {"id": "Skipper", "price": 6000, "limited": true}, {"id": "Amiral", "price": 10000, "plus": true, "limited": true}], "perks": [["Photos, vidéos HD (caméra + drone) de la course (mise en valeur de votre logo)", 1, 1, 1, "oui + montages sur demande", "oui + montages sur demande"], ["Logo sur le drapeau partenaires", "Petit", "Moyen", "Grand", "Grand", "Grand, Principal"], ["Remerciements sur Instagram et LinkedIn", "Collectifs", "Collectifs", "Dédiés", "Dédiés", "Dédiés, selon vos envies"], ["Diffusion de vos offres de stage et d'emploi aux élèves de l'Icam", 0, 1, 1, 1, 1], ["Logo sur les vestes de quart de l'équipage", 0, "Petit", "Moyen", "Moyen", "Grand, Principal"], ["Vlogs et stories spécialisés pendant la course (placement de produit)", 0, 0, 1, 1, 1], ["Intervention de l'équipage dans votre entreprise auprès de vos collaborateurs", 0, 0, 0, 1, 1], ["Logo sur la coque -->voir simulateur en dessous", 0, 0, 0, 1, 1], ["Logo sur une voile (grand-voile, genois ou spinnaker) --> voir simulateur en dessous.", 0, 0, 0, 0, 1], ["Intervention de votre entreprise à l'ICAM", 0, 0, 0, 0, 1], ["Visite du bateau ou sortie en mer pour vos collaborateurs (à convenir ensemble)", 0, 0, 0, 0, 1]], "sim": {"surfaces": {"main": {"enabled": true, "checked": true, "scale": 90, "label": "Grand-voile"}, "spin": {"enabled": true, "checked": true, "scale": 92, "label": "Spinnaker"}, "hull": {"enabled": true, "checked": true, "scale": 94, "label": "Coque"}}, "watermark": {"enabled": true, "opacity": 90, "size": 13}, "demoText": "VOTRE LOGO", "demoLogo": ""}, "youtube": "BNgGzrUfmxU", "hidden": [], "texts": {}, "images": {}};
+var TIERS=[{id:"Matelot",price:1000},{id:"Équipier",price:3000},{id:"Skipper",price:6000,limited:true},{id:"Amiral",price:10000,plus:true,limited:true}];
+var PERKS=[
+ ["Logo sur le drapeau partenaires","S","M","L","XL"],
+ ["Remerciement sur Instagram et LinkedIn","Collectif","Dédié","Dédié","Annonce dédiée"],
+ ["Diffusion de vos offres de stage et d'emploi aux élèves de l'Icam",1,1,1,1],
+ ["Logo sur les vestes de quart de l'équipage",0,1,1,"Emplacement principal"],
+ ["Mentions dans nos stories et vlogs pendant la course",0,1,1,1],
+ ["Photos et vidéos HD de la course pour votre communication",0,1,1,1],
+ ["Logo sur une voile (grand-voile ou spinnaker)",0,0,1,1],
+ ["Intervention de l'équipage dans votre entreprise",0,0,1,1],
+ ["Rencontre avec les étudiants sur le campus",0,0,1,1],
+ ["Logo sur la coque",0,0,0,1],
+ ["Conférence de votre entreprise devant les élèves ingénieurs",0,0,0,1],
+ ["Visite du bateau ou sortie en mer pour vos collaborateurs",0,0,0,1]
+];
+var RACE_START="2027-04-10T09:00:00+02:00";
+(function(){
+"use strict";
+var fr=function(n){return Math.round(n).toLocaleString("fr-FR")},eur=function(n){return fr(n)+" €"};
+var reduce=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+function safeUrl(u){u=String(u||"");return /^(https?:\/\/|\/api\/media\/|assets\/)/.test(u)?u:""}
+
+/* Navigation */
+var nav=document.getElementById("nav"),burger=document.getElementById("burger");
+burger.addEventListener("click",function(){var o=nav.classList.toggle("open");burger.setAttribute("aria-expanded",o);burger.setAttribute("aria-label",o?"Fermer le menu":"Ouvrir le menu")});
+document.querySelectorAll("#links a").forEach(function(a){a.addEventListener("click",function(){nav.classList.remove("open");burger.setAttribute("aria-expanded","false")})});
+var navLinks=[].slice.call(document.querySelectorAll('#links a[href^="#"]:not(.btn)'));
+if("IntersectionObserver" in window){var spy=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)navLinks.forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+e.target.id)})})},{rootMargin:"-45% 0px -50% 0px"});
+["projet","equipe","budget","offres","sponsors","contact"].forEach(function(id){var s=document.getElementById(id);if(s)spy.observe(s)})}
+
+/* Compte a rebours */
+var target=new Date(RACE_START).getTime(),cd={d:document.querySelector('[data-cd="d"]'),h:document.querySelector('[data-cd="h"]'),m:document.querySelector('[data-cd="m"]')};
+function tick(){var s=Math.max(0,(target-Date.now())/1000);cd.d.textContent=Math.floor(s/86400);cd.h.textContent=String(Math.floor(s%86400/3600)).padStart(2,"0");cd.m.textContent=String(Math.floor(s%3600/60)).padStart(2,"0")}
+tick();setInterval(tick,30000);
+
+function countUp(el,to,suffix){if(reduce||/edition=/.test(location.search)){el.textContent=fr(to)+(suffix||"");return}var t0=performance.now();(function f(t){var p=Math.min((t-t0)/1400,1),e=1-Math.pow(1-p,3);el.textContent=fr(to*e)+(suffix||"");if(p<1)requestAnimationFrame(f)})(t0)}
+function onView(el,fn){if(!("IntersectionObserver" in window)){fn();return}var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){fn();io.disconnect()}},{threshold:.3});io.observe(el)}
+document.querySelectorAll("[data-n]").forEach(function(el){onView(el,function(){countUp(el,+el.dataset.n)})});
+
+/* Galerie */
+var track=document.getElementById("track");
+function slide(d){var f=track.querySelector("figure");track.scrollBy({left:d*(f?f.getBoundingClientRect().width+16:400),behavior:reduce?"auto":"smooth"})}
+document.getElementById("prev").onclick=function(){slide(-1)};document.getElementById("next").onclick=function(){slide(1)};
+
+/* Equipe */
+var teamEl=document.getElementById("team"),filter="all";
+function val(s){return s?esc(s):'<span class="todo">À compléter</span>'}
+function renderTeam(T){teamEl.innerHTML="";var G=[],ix={};
+(T||[]).forEach(function(m){var k=(m.team||"").trim()||"Équipe";if(!(k in ix)){ix[k]=G.length;G.push({n:k,m:[]})}G[ix[k]].m.push(m)});
+var O=["Bureau","CCE","Com","Évent interne","Évent externe"];G.sort(function(a,b){var i=O.indexOf(a.n),j=O.indexOf(b.n);return(i<0?99:i)-(j<0?99:j)});G.forEach(function(g){g.m.sort(function(a,b){return(b.lead?1:0)-(a.lead?1:0)});
+ var s=document.createElement("section");s.className="pole";s.innerHTML='<h3>'+esc(g.n)+'</h3><div class="pgrid"></div>';var gr=s.lastChild;
+ g.m.forEach(function(m){
+  var name=(m.prenom||m.nom)?esc((m.prenom+" "+m.nom).trim()):'<span class="todo">Prénom Nom</span>';
+  var ini=((m.prenom||"").charAt(0)+(m.nom||"").charAt(0)).toUpperCase()||"?",ph=safeUrl(m.photo);
+  var c=document.createElement("article");c.className="mb"+(m.lead?" lead":"");c.tabIndex=0;
+  c.innerHTML='<div class="ph">'+(ph?'<img src="'+esc(ph)+'" alt="" loading="lazy">':esc(ini))+'</div><h4>'+name+'</h4><div class="role">'+esc(m.role)+'</div>'+(m.lead?'<span class="crewtag">Responsable de pôle</span>':'')+'<dl class="info">'+[["Promotion",m.promo],["Niveau de voile",m.voile],["Qualité / compétence",m.qualite],["Défi sportif le plus fou",m.defi]].map(function(r){return'<div><dt>'+r[0]+'</dt><dd>'+val(r[1])+'</dd></div>'}).join("")+'</dl>';
+  c.addEventListener("click",function(){c.classList.toggle("open")});gr.appendChild(c)});teamEl.appendChild(s)})}
+document.querySelectorAll(".filters button").forEach(function(b){b.addEventListener("click",function(){filter=b.dataset.f;
+  document.querySelectorAll(".filters button").forEach(function(x){x.setAttribute("aria-pressed",x===b)});
+  teamEl.querySelectorAll(".card").forEach(function(c){c.hidden=!(filter==="all"||c.dataset.team===filter)})})});
+
+/* Reseaux */
+var igEls=document.querySelectorAll("[data-ig]"),igN=document.querySelector('[data-count="ig"]'),liN=document.querySelector('[data-count="li"]'),socialSeen=false,SOC=null;
+function paintSocial(anim){var S=SOC;if(anim){countUp(igN,S.followers);countUp(liN,S.linkedin,"+")}else{igN.textContent=fr(S.followers);liN.textContent=fr(S.linkedin)+"+"}
+  document.getElementById("goalbar").style.width=Math.min(100,S.followers/Math.max(1,S.goal)*100)+"%"}
+function renderSocial(S){SOC=S;igEls.forEach(function(a){a.href=safeUrl(S.instagramUrl)||"#"});
+  document.getElementById("goaltxt").textContent="Objectif "+fr(S.goal)+" abonnés avant le départ : encore "+fr(Math.max(0,S.goal-S.followers))+" à convaincre.";
+  if(socialSeen)paintSocial(false)}
+onView(igN,function(){socialSeen=true;paintSocial(true)});
+
+/* Budget */
+var lines=document.getElementById("lines"),budgetSeen=false;
+function paintBars(){lines.querySelectorAll("i").forEach(function(i){i.style.width=i.dataset.w+"%"})}
+function renderBudget(B){var L=B.lines||[],total=L.reduce(function(s,r){return s+(+r.amount||0)},0),max=Math.max.apply(null,L.map(function(r){return +r.amount||0}).concat(1));
+  lines.innerHTML="";L.forEach(function(r){var li=document.createElement("li");li.innerHTML='<span class="t">'+esc(r.label)+'</span><span class="v">'+eur(+r.amount||0)+'</span><span class="d">'+esc(r.detail)+'</span><span class="bar"><i data-w="'+((+r.amount||0)/max*100)+'"></i></span>';lines.appendChild(li)});
+  document.getElementById("tot").textContent=eur(total);document.getElementById("got").textContent=eur(+B.already||0);document.getElementById("need").textContent=eur(Math.max(0,total-(+B.already||0)));
+  document.getElementById("gauge").dataset.w=total?Math.min(100,(+B.already||0)/total*100):0;
+  var eq=document.getElementById("equiv");eq.innerHTML="";(B.equiv||[]).forEach(function(e){var li=document.createElement("li");li.innerHTML="<b>"+eur(+e.amount||0)+"</b><span>"+esc(e.label)+"</span>";eq.appendChild(li)});
+  if(budgetSeen){paintBars();document.getElementById("gauge").style.width=document.getElementById("gauge").dataset.w+"%"}}
+onView(lines,function(){budgetSeen=true;paintBars();var g=document.getElementById("gauge");g.style.width=g.dataset.w+"%"});
+
+/* Sponsors */
+var lg=document.getElementById("logos");
+function mono(name){return name.replace(/[^A-Za-zÀ-ÿ ]/g,"").split(" ").filter(function(w){return w.length>2}).map(function(w){return w[0]}).join("").slice(0,2).toUpperCase()||"?"}
+function renderSponsors(S){lg.innerHTML="";var years={};(S||[]).forEach(function(s){years[s.year]=1});
+  var ys=Object.keys(years).sort();document.getElementById("sp-title").textContent=ys.length?"Ils nous ont fait confiance en "+ys.join(", ").replace(/, ([^,]*)$/," et $1"):"Ils nous ont fait confiance";
+  (S||[]).forEach(function(s){var url=safeUrl(s.url),a=document.createElement(url?"a":"div");a.className="sp";if(url){a.href=url;a.target="_blank";a.rel="noopener"}
+   var src=safeUrl(s.logo)||(s.domain&&/^[a-z0-9.-]+\.[a-z]{2,}$/i.test(s.domain)?"/api/logo?domain="+encodeURIComponent(s.domain):"");
+   a.innerHTML='<span class="mark">'+(src?'<img src="'+esc(src)+'" alt="Logo '+esc(s.name)+'" loading="lazy">':'<span class="mono">'+esc(mono(s.name))+'</span>')+'</span><span class="sp-name">'+esc(s.name)+'</span><small><span>Partenaire '+esc(s.year)+'</span>'+(url?'<u>Voir le site</u>':'')+'</small>';
+   var im=a.querySelector("img");if(im)im.onerror=function(){im.parentNode.innerHTML='<span class="mono">'+esc(mono(s.name))+'</span>'};
+   lg.appendChild(a)})}
+
+/* Formules */
+var tbl=document.getElementById("tiers"),sel=document.getElementById("formule"),selCol=3;
+function renderTiers(T,P){
+  tbl.tHead.innerHTML='<tr><th scope="col"><span style="font-weight:600;color:var(--muted);font-size:14px">Contreparties</span></th></tr>';tbl.tBodies[0].innerHTML="";tbl.tFoot.innerHTML="<tr><td></td></tr>";
+  var hr=tbl.tHead.rows[0],body=tbl.tBodies[0],foot=tbl.tFoot.rows[0];sel.innerHTML="<option>Je ne sais pas encore</option>";
+  T.forEach(function(t,i){var th=document.createElement("th");th.scope="col";th.dataset.col=i+1;
+    th.innerHTML='<button type="button" aria-pressed="false"><span class="name">'+esc(t.id)+'</span><span class="price">'+eur(+t.price||0)+(t.plus?" et +":"")+'</span>'+(t.limited?'<span class="limited">Places limitées</span>':'')+'</button>';hr.appendChild(th);
+    var td=document.createElement("td");td.dataset.col=i+1;td.innerHTML='<a class="btn" href="#contact" data-pick="'+esc(t.id)+'">Choisir '+esc(t.id)+'</a>';foot.appendChild(td);
+    var o=document.createElement("option");o.textContent=t.id+" ("+eur(+t.price||0)+(t.plus?" et plus":"")+")";o.value=t.id;sel.appendChild(o)});
+  var om=document.createElement("option");om.textContent="Mécénat (don)";om.value="Mécénat";sel.appendChild(om);
+  P.forEach(function(p){var tr=document.createElement("tr"),th=document.createElement("td");th.textContent=p[0];tr.appendChild(th);
+    for(var i=1;i<=T.length;i++){var td=document.createElement("td");td.dataset.col=i;var v=p[i];if(v==="1"||v==="oui")v=1;if(v===undefined||v===""||v==="0"||v==="non")v=0;
+      td.innerHTML=v===1?'<span class="yes" role="img" aria-label="Inclus"></span>':v===0?'<span class="no" role="img" aria-label="Non inclus"></span>':'<span class="txt">'+esc(v)+'</span>';tr.appendChild(td)}body.appendChild(tr)});
+  hr.querySelectorAll("button").forEach(function(b,i){b.addEventListener("click",function(){highlight(i+1)})});
+  var m=document.getElementById("tiers-m");TM={T:T,P:P};m.innerHTML='<div class="tm-tabs" role="tablist">'+T.map(function(t,i){return'<button type="button" role="tab" data-i="'+(i+1)+'"><b>'+esc(t.id)+'</b><span>'+eur(+t.price||0)+(t.plus?" +":"")+'</span></button>'}).join("")+'</div><div class="tm-body"></div>';
+  m.querySelectorAll(".tm-tabs button").forEach(function(b){b.onclick=function(){highlight(+b.dataset.i)}});
+  highlight(Math.min(selCol,T.length))}
+var TM=null;
+function renderTierMobile(col){var m=document.getElementById("tiers-m");if(!TM||!m.querySelector(".tm-body"))return;var t=TM.T[col-1];if(!t)return;
+  m.querySelectorAll(".tm-tabs button").forEach(function(b){b.setAttribute("aria-selected",+b.dataset.i===col)});
+  var li=TM.P.map(function(p){var v=p[col];if(v==="1"||v==="oui")v=1;if(v===undefined||v===""||v==="0"||v==="non")v=0;
+    return'<li class="'+(v===0?"off":"")+'"><span class="'+(v===0?"no":"yes")+'"></span><span>'+esc(p[0])+(v!==0&&v!==1?' : <b>'+esc(v)+'</b>':'')+'</span></li>'}).join("");
+  m.querySelector(".tm-body").innerHTML='<div class="tm-price">'+eur(+t.price||0)+(t.plus?" et +":"")+(t.limited?' <span class="limited">Places limitées</span>':'')+'</div><ul>'+li+'</ul><a class="btn" href="#contact" data-pick="'+esc(t.id)+'">Choisir '+esc(t.id)+'</a>'}
+function highlight(col){selCol=col;renderTierMobile(col);tbl.querySelectorAll("[data-col]").forEach(function(c){c.classList.toggle("sel",+c.dataset.col===col)});tbl.tHead.querySelectorAll("button").forEach(function(b,i){b.setAttribute("aria-pressed",i+1===col)})}
+document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("[data-pick]");if(a)sel.value=a.dataset.pick});
+
+/* Textes, images, sections, vidéo (modifiables depuis l'admin) */
+function richText(s){return esc(s).replace(/\*\*([^*]+)\*\*/g,"<b>$1</b>").replace(/\n/g,"<br>")}
+/* HTML autorisé dans les textes modifiés depuis l'admin : gras, italique, souligné, petits caractères, liens, retours à la ligne */
+var OKTAG={B:1,STRONG:1,I:1,EM:1,U:1,BR:1,A:1,SMALL:1,SPAN:1};
+function sanitize(html){var t=document.createElement("template");t.innerHTML=String(html);
+  (function walk(n){[].slice.call(n.childNodes).forEach(function(c){
+    if(c.nodeType===3)return;if(c.nodeType!==1){c.remove();return}walk(c);
+    if(c.tagName==="DIV"||c.tagName==="P"){var f=document.createDocumentFragment();if(c.previousSibling)f.appendChild(document.createElement("br"));while(c.firstChild)f.appendChild(c.firstChild);c.replaceWith(f);return}
+    if(!OKTAG[c.tagName]){var g=document.createDocumentFragment();while(c.firstChild)g.appendChild(c.firstChild);c.replaceWith(g);return}
+    var href=c.getAttribute("href");[].slice.call(c.attributes).forEach(function(a){c.removeAttribute(a.name)});
+    if(c.tagName==="A"){if(href&&/^(https?:|mailto:|tel:|#|\/)/i.test(href)){c.setAttribute("href",href);if(/^https?:/i.test(href)){c.setAttribute("target","_blank");c.setAttribute("rel","noopener")}}}})})(t.content);
+  return t.innerHTML}
+function applyTexts(T){if(!T)return;document.querySelectorAll("[data-edit]").forEach(function(el){var v=T[el.dataset.edit];if(typeof v!=="string")return;el.innerHTML=/[<&]/.test(v)?sanitize(v):richText(v);
+  if(el.tagName==="LI")el.classList.toggle("icv-removed",!el.textContent.trim()&&!el.querySelector("img"));
+  if(el.dataset.n!==undefined){var num=parseInt(el.textContent.replace(/[^0-9]/g,""),10);if(!isNaN(num))el.dataset.n=num}})}
+function applyImages(I){if(!I)return;document.querySelectorAll("[data-img]").forEach(function(el){var u=safeUrl(I[el.dataset.img]);if(u)el.src=u});
+  document.querySelectorAll("[data-bg]").forEach(function(el){var u=safeUrl(I[el.dataset.bg]);if(u)el.style.backgroundImage="url('"+u.replace(/'/g,"")+"')"})}
+function applySections(hidden){hidden=hidden||[];["projet","galerie","video","equipe","budget","offres","formules-bloc","mecenat","simulateur","sponsors","contact"].forEach(function(id){var el=document.getElementById(id);if(el)el.hidden=hidden.indexOf(id)>=0});
+  document.querySelectorAll('#links a[href^="#"]').forEach(function(a){var t=document.getElementById(a.getAttribute("href").slice(1));if(t&&!a.classList.contains("btn"))a.hidden=t.hidden})}
+function applyVideo(id){if(!id||!/^[A-Za-z0-9_-]{6,20}$/.test(id))return;var f=document.querySelector(".yt iframe");if(f&&f.src.indexOf(id)<0)f.src="https://www.youtube-nocookie.com/embed/"+id+"?rel=0"}
+
+/* Contenu : valeurs par defaut, puis contenu publie depuis l'admin */
+/* Structure : blocs supprimés ou dupliqués depuis l'admin */
+function rekey(root,id){[root].concat([].slice.call(root.querySelectorAll("[data-edit],[data-img],[data-blk]"))).forEach(function(e){["edit","img","blk"].forEach(function(k){if(e.dataset[k])e.dataset[k]=e.dataset[k]+"~"+id})})}
+function applyStructure(D){document.querySelectorAll("[data-dup]").forEach(function(e){e.remove()});
+  (D.dups||[]).forEach(function(d){var src=document.querySelector('[data-blk="'+d.src+'"]'),after=document.querySelector('[data-blk="'+(d.after||d.src)+'"]')||src;if(!src||!after||src.querySelector("[id]"))return;
+    var c=src.cloneNode(true);c.dataset.dup=d.id;c.classList.remove("icv-removed");rekey(c,d.id);after.parentNode.insertBefore(c,after.nextSibling)});
+  document.querySelectorAll(".icv-removed").forEach(function(e){e.classList.remove("icv-removed")});
+  (D.removed||[]).forEach(function(k){var e=document.querySelector('[data-blk="'+k+'"]');if(e)e.classList.add("icv-removed")})}
+function renderAll(D){applyStructure(D);renderTeam(D.team);renderBudget(D.budget);renderSponsors(D.sponsors);renderSocial(D.social);
+  renderTiers(D.tiers&&D.tiers.length?D.tiers:TIERS,D.perks&&D.perks.length?D.perks:PERKS);applyTexts(D.texts);applyImages(D.images);applySections(D.hidden);applyVideo(D.youtube);
+  window.SIMCFG=D.sim||null;try{window.dispatchEvent(new CustomEvent("simcfg",{detail:D.sim||null}))}catch(e){}}
+renderAll(DEFAULTS);
+window.__icv={render:renderAll,sanitize:sanitize,defaults:DEFAULTS};
+window.__icvReady=(location.protocol==="file:"?Promise.resolve():fetch("/api/content",{cache:"no-store"}).then(function(r){return r.ok?r.json():null}).then(function(c){
+  if(c&&Array.isArray(c.team))renderAll(Object.assign({},c,{budget:c.budget||DEFAULTS.budget,sponsors:c.sponsors||DEFAULTS.sponsors,social:Object.assign({},DEFAULTS.social,c.social||{})}))}).catch(function(){}));
+
+/* Formulaire */
+document.getElementById("f").addEventListener("submit",function(ev){ev.preventDefault();
+  var f=ev.target,m=document.getElementById("msg"),btn=f.querySelector("button[type=submit]"),v=function(n){return f.elements[n].value.trim()};
+  if(f.elements.website.value)return;
+  if(!v("prenom")||!v("nom")||!v("ent")||!/^\S+@\S+\.\S+$/.test(v("mail"))||!f.elements.rgpd.checked){m.textContent="Complétez les champs obligatoires (*) avec une adresse e-mail valide, puis cochez la case d'accord.";return}
+  var d={rgpd:true};["prenom","nom","ent","fonction","mail","tel","type","formule","message","website"].forEach(function(k){d[k]=v(k)});
+  btn.disabled=true;m.textContent="Envoi en cours...";
+  var GOOGLE="https://script.google.com/macros/s/AKfycbxXE1if0V5uULzHmGSBOEVixrsTmT0_Ffu-8WO_CVRpO9EG7n2FG2oemTuIxRD-wAo/exec";
+  function viaGoogle(){var p=new URLSearchParams();["prenom","nom","ent","fonction","mail","tel","type","formule","message","website"].forEach(function(k){p.append(k,d[k]||"")});
+    return fetch(GOOGLE,{method:"POST",body:p}).then(function(r){return r.json()})}
+  fetch("/api/contact",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(d)}).then(function(r){return r.json()}).catch(viaGoogle)
+  .then(function(r){if(r&&r.ok){f.reset();m.textContent="Demande envoyée. Vous recevez un e-mail de confirmation et nous vous rappelons sous 48 heures ouvrées."}else if(r&&r.erreur==="limite"){m.textContent="Plusieurs demandes ont déjà été envoyées depuis ce poste : nous revenons vers vous rapidement."}else{throw 0}})
+  .catch(function(){m.textContent="L'envoi n'a pas abouti. Réessayez dans un instant ou écrivez-nous directement par e-mail."})
+  .then(function(){btn.disabled=false})});
+})();
+</script>
+<script>
+/* ============ Intégration de logo sur la vidéo du J80 ============
+   Suivi pré-calculé (assets/track2.json) : pour chaque image et chaque surface (coque, grand-voile, spinnaker),
+   un maillage de points suivi par flot optique dense, qui épouse les plis et la courbure de la voile.
+   Le logo est déformé sur ce maillage en WebGL, ombré avec la lumière réelle de la voile, sans IA. */
+(function(){
+"use strict";
+var cv=document.getElementById("simcv"),vid=document.getElementById("simvid"),load=document.getElementById("simload"),msg=document.getElementById("simmsg");
+var playBtn=document.getElementById("simplay"),seek=document.getElementById("simseek"),tc=document.getElementById("simtc");
+var thumbBox=document.getElementById("simpreview"),thumb=document.getElementById("simthumb"),srcTxt=document.getElementById("simsrc"),whiteBox=document.getElementById("simwhite");
+function say(t,err){msg.textContent=t||"";msg.className=err?"err":""}
+var gl=cv.getContext("webgl",{preserveDrawingBuffer:true,alpha:false,antialias:true,premultipliedAlpha:false});
+if(!gl){say("Votre navigateur ne prend pas en charge WebGL : l'aperçu animé n'est pas disponible.",true);load.hidden=true;return}
+
+var VS_FULL="attribute vec2 p;varying vec2 v;void main(){v=p*.5+.5;gl_Position=vec4(p,0.,1.);}";
+var FS_VID="precision mediump float;varying vec2 v;uniform sampler2D vid;void main(){gl_FragColor=vec4(texture2D(vid,vec2(v.x,1.-v.y)).rgb,1.);}";
+var VS_MESH="attribute vec2 pos;attribute vec2 uv;uniform vec2 size;varying vec2 vuv;varying vec2 vscr;void main(){vuv=uv;vscr=pos/size;gl_Position=vec4(pos.x/size.x*2.-1.,1.-pos.y/size.y*2.,0.,1.);}";
+var FS_MESH=[
+"precision highp float;varying vec2 vuv;varying vec2 vscr;",
+"uniform sampler2D vid,logo;uniform vec4 rect;uniform float alpha,kind,white,lref;",
+"vec3 hsv(vec3 c){vec4 K=vec4(0.,-1./3.,2./3.,-1.);vec4 p=mix(vec4(c.bg,K.wz),vec4(c.gb,K.xy),step(c.b,c.g));vec4 q=mix(vec4(p.xyw,c.r),vec4(c.r,p.yzx),step(p.x,c.r));float d=q.x-min(q.w,q.y);return vec3(abs(q.z+(q.w-q.y)/(6.*d+1e-10)),d/(q.x+1e-10),q.x);}",
+"void main(){",
+" vec2 lu=(vuv-rect.xy)/rect.zw;if(lu.x<0.||lu.y<0.||lu.x>1.||lu.y>1.)discard;",
+" vec4 L=texture2D(logo,lu);",
+" if(kind>1.5){gl_FragColor=vec4(L.rgb,L.a*alpha);return;}",
+" vec3 c=texture2D(vid,vscr).rgb;vec3 s=hsv(c);float lum=dot(c,vec3(.299,.587,.114));float sh=clamp(lum/max(lref,.15),.35,1.35);",
+" float key;vec3 col;",
+" if(kind<.5){key=clamp((.56-s.y)/.14,0.,1.)*clamp((s.z-.30)/.10,0.,1.);col=L.rgb*clamp(c/max(lref,.3),0.,1.15);}",
+" else{float hu=s.x*360.;key=clamp((s.y-.28)/.15,0.,1.)*smoothstep(183.,195.,hu)*(1.-smoothstep(255.,267.,hu))*clamp((s.z-.16)/.1,0.,1.);",
+"  col=mix(L.rgb,vec3(1.),white)*sh;}",
+" gl_FragColor=vec4(col,L.a*key*alpha);}"].join("\n");
+function shader(t,src){var s=gl.createShader(t);gl.shaderSource(s,src);gl.compileShader(s);if(!gl.getShaderParameter(s,gl.COMPILE_STATUS))throw new Error(gl.getShaderInfoLog(s));return s}
+function program(vs,fs,attrs,unis){var p=gl.createProgram();gl.attachShader(p,shader(gl.VERTEX_SHADER,vs));gl.attachShader(p,shader(gl.FRAGMENT_SHADER,fs));attrs.forEach(function(a,i){gl.bindAttribLocation(p,i,a)});gl.linkProgram(p);
+  if(!gl.getProgramParameter(p,gl.LINK_STATUS))throw new Error(gl.getProgramInfoLog(p));var u={};unis.forEach(function(n){u[n]=gl.getUniformLocation(p,n)});return{p:p,u:u}}
+var PV,PM;
+try{PV=program(VS_FULL,FS_VID,["p"],["vid"]);PM=program(VS_MESH,FS_MESH,["pos","uv"],["size","vid","logo","rect","alpha","kind","white","lref"])}catch(e){say("Initialisation graphique impossible sur cet appareil.",true);return}
+var fullBuf=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,fullBuf);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);
+var meshBuf=gl.createBuffer(),idxCache={};
+function idx(gw,gh){var k=gw+"x"+gh;if(idxCache[k])return idxCache[k];var a=[];for(var j=0;j<gh-1;j++)for(var i=0;i<gw-1;i++){var n=j*gw+i;a.push(n,n+1,n+gw,n+1,n+gw+1,n+gw)}
+  var b=gl.createBuffer();gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,b);gl.bufferData(gl.ELEMENT_ARRAY_BUFFER,new Uint16Array(a),gl.STATIC_DRAW);return idxCache[k]={b:b,n:a.length}}
+function mkTex(){var t=gl.createTexture();gl.bindTexture(gl.TEXTURE_2D,t);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.CLAMP_TO_EDGE);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.CLAMP_TO_EDGE);
+  gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.LINEAR);return t}
+var tVid=mkTex(),tLogo=mkTex(),tWm=mkTex();
+function upload(tex,canvas){gl.bindTexture(gl.TEXTURE_2D,tex);gl.pixelStorei(gl.UNPACK_PREMULTIPLY_ALPHA_WEBGL,false);gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,gl.RGBA,gl.UNSIGNED_BYTE,canvas);
+  gl.generateMipmap(gl.TEXTURE_2D);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR_MIPMAP_LINEAR)}
+
+/* --- Réglages (modifiables depuis l'admin) --- */
+var CFG={surfaces:{main:{enabled:true,checked:true,scale:90,label:"Grand-voile"},spin:{enabled:true,checked:true,scale:92,label:"Spinnaker"},hull:{enabled:true,checked:true,scale:94,label:"Coque"}},
+  watermark:{enabled:true,opacity:90,size:13},demoText:"VOTRE LOGO",demoLogo:""};
+var TRACK=null,LOGO=null,WM=null,lastT=0,on={},userWhite=null,ready=false,userLogo=false;
+var KIND={hull:0,main:0,spin:1},ORDER=["hull","main","spin"];
+
+function bindMeshAttribs(){gl.bindBuffer(gl.ARRAY_BUFFER,meshBuf);gl.enableVertexAttribArray(0);gl.vertexAttribPointer(0,2,gl.FLOAT,false,16,0);gl.enableVertexAttribArray(1);gl.vertexAttribPointer(1,2,gl.FLOAT,false,16,8)}
+function fitRect(asp,la,scale){var s=scale/100,w=Math.min(s*asp,s*la),h=w/la;if(h>s){h=s;w=h*la}return[(1-w/asp)/2,(1-h)/2,w/asp,h]}
+function draw(t){
+  if(!ready||!TRACK)return;
+  var W=cv.width,H=cv.height,f=Math.max(0,Math.min(TRACK.n-1,Math.round(t*TRACK.fps))),sx=W/TRACK.W,sy=H/TRACK.H;
+  gl.viewport(0,0,W,H);gl.disable(gl.BLEND);
+  gl.activeTexture(gl.TEXTURE0);gl.bindTexture(gl.TEXTURE_2D,tVid);
+  if(vid.readyState>=2)gl.texImage2D(gl.TEXTURE_2D,0,gl.RGB,gl.RGB,gl.UNSIGNED_BYTE,vid);
+  gl.useProgram(PV.p);gl.uniform1i(PV.u.vid,0);gl.bindBuffer(gl.ARRAY_BUFFER,fullBuf);gl.disableVertexAttribArray(1);gl.enableVertexAttribArray(0);gl.vertexAttribPointer(0,2,gl.FLOAT,false,0,0);gl.drawArrays(gl.TRIANGLE_STRIP,0,4);
+  gl.enable(gl.BLEND);gl.blendFunc(gl.SRC_ALPHA,gl.ONE_MINUS_SRC_ALPHA);gl.useProgram(PM.p);
+  gl.uniform2f(PM.u.size,W,H);gl.uniform1i(PM.u.vid,0);gl.uniform1i(PM.u.logo,1);
+  if(LOGO){
+    gl.activeTexture(gl.TEXTURE1);gl.bindTexture(gl.TEXTURE_2D,tLogo);
+    var white=userWhite===null?(LOGO.dark?1:0):(userWhite?1:0);
+    ORDER.forEach(function(sf){var sc=CFG.surfaces[sf];if(!sc||!sc.enabled||!on[sf])return;(TRACK.surfaces[sf]||[]).forEach(function(sg){
+      if(f<sg.s||f>sg.e)return;var a=1;if(sg.fi&&f<sg.s+sg.fi)a=(f-sg.s+1)/(sg.fi+1);if(sg.fo&&f>sg.e-sg.fo)a=Math.min(a,(sg.e-f+1)/(sg.fo+1));
+      var nn=sg.gw*sg.gh,k=(f-sg.s)*nn*2,v=new Float32Array(nn*4);
+      for(var n=0;n<nn;n++){var i=n%sg.gw,j=(n-i)/sg.gw;v[n*4]=sg.p[k+n*2]/10*sx;v[n*4+1]=sg.p[k+n*2+1]/10*sy;v[n*4+2]=i/(sg.gw-1);v[n*4+3]=j/(sg.gh-1)}
+      gl.bindBuffer(gl.ARRAY_BUFFER,meshBuf);gl.bufferData(gl.ARRAY_BUFFER,v,gl.DYNAMIC_DRAW);bindMeshAttribs();
+      var r=fitRect(sg.asp,LOGO.aspect,+sc.scale||90);gl.uniform4f(PM.u.rect,r[0],r[1],r[2],r[3]);
+      gl.uniform1f(PM.u.alpha,a);gl.uniform1f(PM.u.kind,KIND[sf]);gl.uniform1f(PM.u.white,white);gl.uniform1f(PM.u.lref,(sg.l[f-sg.s]||600)/1000);
+      var I=idx(sg.gw,sg.gh);gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,I.b);gl.drawElements(gl.TRIANGLES,I.n,gl.UNSIGNED_SHORT,0)})})}
+  if(WM&&CFG.watermark.enabled){
+    gl.activeTexture(gl.TEXTURE1);gl.bindTexture(gl.TEXTURE_2D,tWm);
+    var hh=H*(+CFG.watermark.size||13)/100,ww=hh*WM.aspect,m=H*.03,x1=W-m,x0=x1-ww,y1=H-m,y0=y1-hh;
+    gl.bindBuffer(gl.ARRAY_BUFFER,meshBuf);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([x0,y0,0,0,x1,y0,1,0,x0,y1,0,1,x1,y1,1,1]),gl.DYNAMIC_DRAW);bindMeshAttribs();
+    gl.uniform4f(PM.u.rect,0,0,1,1);gl.uniform1f(PM.u.alpha,(+CFG.watermark.opacity||90)/100);gl.uniform1f(PM.u.kind,2);
+    var I2=idx(2,2);gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,I2.b);gl.drawElements(gl.TRIANGLES,I2.n,gl.UNSIGNED_SHORT,0)}
+  seek.value=f;tc.textContent=(f/TRACK.fps).toFixed(1).replace(".",",")+" s";
+}
+
+/* --- Synchronisation image par image --- */
+if("requestVideoFrameCallback" in vid){var cb=function(now,meta){lastT=meta.mediaTime;draw(lastT);vid.requestVideoFrameCallback(cb)};vid.requestVideoFrameCallback(cb)}
+else{(function loop(){if(!vid.paused){lastT=vid.currentTime;draw(lastT)}requestAnimationFrame(loop)})()}
+vid.addEventListener("seeked",function(){lastT=vid.currentTime;draw(lastT)});
+vid.addEventListener("loadeddata",function(){ready=true;load.hidden=true;draw(vid.currentTime)});
+vid.addEventListener("error",function(){load.textContent="La vidéo n'a pas pu être chargée."});
+fetch("assets/track2.json").then(function(r){return r.json()}).then(function(j){TRACK=j;seek.max=j.n-1;draw(lastT)}).catch(function(){say("Données de suivi indisponibles : rechargez la page.",true)});
+
+var userPaused=false;
+function setPlaying(p){if(p){var pr=vid.play();if(pr&&pr.catch)pr.catch(function(){})}else vid.pause();playBtn.textContent=p?"❚❚":"▶";playBtn.setAttribute("aria-label",p?"Mettre en pause":"Lire")}
+playBtn.addEventListener("click",function(){setPlaying(vid.paused);userPaused=vid.paused});
+seek.addEventListener("input",function(){if(TRACK)vid.currentTime=(+seek.value+.25)/TRACK.fps});
+var rec=null;
+if("IntersectionObserver" in window){new IntersectionObserver(function(es){es.forEach(function(e){if(rec)return;if(e.isIntersecting){if(!userPaused)setPlaying(true)}else vid.pause()})},{threshold:.25}).observe(cv)}
+
+/* --- Préparation des logos --- */
+function pot(n){return Math.max(64,Math.min(1024,Math.pow(2,Math.round(Math.log(n)/Math.LN2))))}
+function toTex(c){var o=document.createElement("canvas");o.width=pot(c.width);o.height=pot(c.height);o.getContext("2d").drawImage(c,0,0,o.width,o.height);return o}
+function prepare(img,label){
+  var w0=img.naturalWidth||img.width||0,h0=img.naturalHeight||img.height||0,svgLike=!w0||!h0;if(svgLike){w0=800;h0=400}
+  var k=Math.min(6,1024/Math.max(w0,h0)),w=Math.max(1,Math.round(w0*k)),h=Math.max(1,Math.round(h0*k));
+  var c=document.createElement("canvas");c.width=w;c.height=h;var g=c.getContext("2d");g.drawImage(img,0,0,w,h);
+  var id;try{id=g.getImageData(0,0,w,h)}catch(e){return null}
+  var d=id.data,N=w*h,x,y,o,border=[];
+  for(x=0;x<w;x++){border.push(x,(h-1)*w+x)}for(y=0;y<h;y++){border.push(y*w,y*w+w-1)}
+  var op=border.filter(function(p){return d[p*4+3]>200});
+  if(op.length>border.length*.5){
+    /* couleur de fond la plus fréquente sur le bord (tolère les coins arrondis et le bruit JPEG) */
+    var bins={},best=null,bc=0;op.forEach(function(p){var key=(d[p*4]>>4)+"_"+(d[p*4+1]>>4)+"_"+(d[p*4+2]>>4);bins[key]=(bins[key]||0)+1;if(bins[key]>bc){bc=bins[key];best=p}});
+    if(bc>op.length*.45){var mr=d[best*4],mg=d[best*4+1],mb=d[best*4+2];
+      var dist=function(p){var a=p*4;return Math.sqrt(Math.pow(d[a]-mr,2)+Math.pow(d[a+1]-mg,2)+Math.pow(d[a+2]-mb,2))};
+      var T=52,seen=new Uint8Array(N),st=op.filter(function(p){return dist(p)<T});st.forEach(function(p){seen[p]=1});
+      while(st.length){var p=st.pop();d[p*4+3]=0;x=p%w;y=(p-x)/w;
+        for(var q=0;q<4;q++){var nx=x+(q===0?1:q===1?-1:0),ny=y+(q===2?1:q===3?-1:0);if(nx<0||ny<0||nx>=w||ny>=h)continue;var qq=ny*w+nx;if(seen[qq])continue;seen[qq]=1;
+          var dd=dist(qq);if(dd<T)st.push(qq);else if(dd<T*1.8)d[qq*4+3]=Math.min(d[qq*4+3],Math.round(255*(dd-T)/(T*.8)))}}}}
+  var minx=w,miny=h,maxx=-1,maxy=-1,lum=0,cnt=0;
+  for(y=0;y<h;y++)for(x=0;x<w;x++){o=(y*w+x)*4;if(d[o+3]>24){if(x<minx)minx=x;if(x>maxx)maxx=x;if(y<miny)miny=y;if(y>maxy)maxy=y;lum+=(.299*d[o]+.587*d[o+1]+.114*d[o+2])*d[o+3]/255;cnt+=d[o+3]/255}}
+  if(maxx<0)return null;g.putImageData(id,0,0);
+  var pad=Math.round(Math.max(maxx-minx,maxy-miny)*.03),cw=maxx-minx+1+2*pad,ch=maxy-miny+1+2*pad;
+  var prev=document.createElement("canvas");prev.width=cw;prev.height=ch;prev.getContext("2d").drawImage(c,minx-pad,miny-pad,cw,ch,0,0,cw,ch);
+  return{tex:toTex(prev),preview:prev,aspect:cw/ch,dark:(lum/Math.max(cnt,1))/255<.38,small:!svgLike&&Math.max(img.naturalWidth,img.naturalHeight)<100,label:label}}
+function textLogo(name){var c=document.createElement("canvas"),g=c.getContext("2d"),f="800 120px Saira, Arial, Helvetica, sans-serif";g.font=f;
+  var tw=Math.ceil(g.measureText(name).width)+40;c.width=Math.min(tw,4000);c.height=170;g.font=f;g.fillStyle="#0f2c47";g.textBaseline="middle";g.fillText(name,20,88);
+  return{tex:toTex(c),preview:c,aspect:c.width/c.height,dark:true,label:"Texte"}}
+function useLogo(L,note,isUser){
+  if(!L){say("Ce logo est vide ou illisible. Essayez un autre fichier.",true);return}
+  LOGO=L;userLogo=!!isUser;gl.activeTexture(gl.TEXTURE1);upload(tLogo,L.tex);
+  if(isUser){thumb.src=L.preview.toDataURL();thumbBox.hidden=false;srcTxt.textContent=L.label}
+  if(userWhite===null)whiteBox.checked=L.dark;say(note||"");draw(lastT)}
+function imgFromUrl(u,cb,err){var im=new Image();im.onload=function(){cb(im)};im.onerror=err||function(){};im.src=u}
+function demo(){if(userLogo)return;
+  if(CFG.demoLogo)imgFromUrl(CFG.demoLogo,function(im){if(!userLogo)useLogo(prepare(im,"Démo"),"",false)},function(){useLogo(textLogo(CFG.demoText||"VOTRE LOGO"),"",false)});
+  else useLogo(textLogo(CFG.demoText||"VOTRE LOGO"),"",false)}
+/* filigrane Icam Voile */
+imgFromUrl("assets/img/logo.webp",function(im){var s=256,c=document.createElement("canvas");c.width=s;c.height=s;var g=c.getContext("2d");
+  g.fillStyle="#fff";g.beginPath();g.arc(s/2,s/2,s/2-2,0,Math.PI*2);g.fill();g.drawImage(im,s*.06,s*.06,s*.88,s*.88);WM={aspect:1};gl.activeTexture(gl.TEXTURE1);upload(tWm,c);draw(lastT)});
+
+/* --- Réglages de l'admin --- */
+var BASE=JSON.parse(JSON.stringify(CFG));
+function applyCfg(c){c=c||{};var cs=c.surfaces||{};CFG=Object.assign({},BASE,c);CFG.surfaces={};
+  ["main","spin","hull"].forEach(function(k){CFG.surfaces[k]=Object.assign({},BASE.surfaces[k],cs[k]||{})});CFG.watermark=Object.assign({},BASE.watermark,c.watermark||{});
+  document.querySelectorAll(".spots input").forEach(function(i){var s=CFG.surfaces[i.value];var lab=i.parentNode;lab.hidden=!s.enabled;lab.lastChild.textContent=s.label;i.checked=!!s.checked;on[i.value]=i.checked});
+  demo();draw(lastT)}
+applyCfg(window.SIMCFG||null);
+window.addEventListener("simcfg",function(e){applyCfg(e.detail)});
+
+/* --- Logo par nom de domaine --- */
+document.getElementById("simform").addEventListener("submit",function(e){e.preventDefault();
+  var raw=document.getElementById("simdom").value.trim().toLowerCase(),dom=raw.replace(/^https?:\/\//,"").replace(/^www\./,"").split(/[\/?#:]/)[0];
+  if(!/^[a-z0-9-]+(\.[a-z0-9-]+)+$/.test(dom)){say("Saisissez un nom de domaine, par exemple : votre-entreprise.fr",true);return}
+  var name=dom.split(".")[0].replace(/-/g," ").toUpperCase();say("Recherche du logo de "+dom+"...");
+  fetch("/api/logo?domain="+encodeURIComponent(dom)).then(function(r){if(!r.ok)throw 0;var src=r.headers.get("x-logo-source")||"";return r.blob().then(function(b){return{b:b,src:src}})})
+  .then(function(x){var u=URL.createObjectURL(x.b);imgFromUrl(u,function(im){var L=prepare(im,"Logo trouvé sur "+dom);URL.revokeObjectURL(u);if(!L)return fallback();
+      useLogo(L,x.src==="favicon"||x.src==="icon"||L.small?"Seule l'icône du site a été trouvée. Importez votre logo pour un rendu net.":"Logo trouvé. S'il ne convient pas, importez votre fichier.",true)},function(){URL.revokeObjectURL(u);fallback()})}).catch(fallback);
+  function fallback(){var L=textLogo(name);L.label="Nom de l'entreprise (logo introuvable)";useLogo(L,"Logo introuvable automatiquement pour "+dom+" : nous affichons le nom. Importez votre logo pour un rendu exact.",true)}});
+document.getElementById("simfile").addEventListener("change",function(){var f=this.files&&this.files[0];this.value="";if(!f)return;
+  if(!/^image\/(png|jpe?g|webp|svg\+xml|gif)$/.test(f.type)){say("Format non pris en charge. Utilisez un fichier PNG, SVG, JPG ou WebP.",true);return}
+  if(f.size>10*1024*1024){say("Fichier trop lourd : 10 Mo maximum.",true);return}
+  var u=URL.createObjectURL(f);imgFromUrl(u,function(im){useLogo(prepare(im,"Fichier : "+f.name),"Logo importé et intégré à la vidéo.",true);URL.revokeObjectURL(u)},function(){say("Image illisible. Essayez un PNG ou un SVG.",true)})});
+document.querySelectorAll(".spots input").forEach(function(i){i.addEventListener("change",function(){on[i.value]=i.checked;draw(lastT)})});
+whiteBox.addEventListener("change",function(){userWhite=whiteBox.checked;draw(lastT)});
+
+/* --- Exports --- */
+document.getElementById("simshot").addEventListener("click",function(){draw(lastT);cv.toBlob(function(b){if(!b){say("Capture impossible sur ce navigateur.",true);return}
+  var a=document.createElement("a");a.href=URL.createObjectURL(b);a.download="icam-voile-j80-logo.png";document.body.appendChild(a);a.click();a.remove()},"image/png")});
+var recBtn=document.getElementById("simrec");
+recBtn.addEventListener("click",function(){
+  if(rec){rec.stop();return}
+  if(!cv.captureStream||!window.MediaRecorder){say("L'enregistrement vidéo n'est pas pris en charge par ce navigateur. Utilisez Chrome, Edge ou Firefox.",true);return}
+  var types=["video/mp4;codecs=avc1","video/mp4","video/webm;codecs=vp9","video/webm"],mime=types.filter(function(t){return MediaRecorder.isTypeSupported(t)})[0]||"";
+  var chunks=[];try{rec=new MediaRecorder(cv.captureStream(30),mime?{mimeType:mime,videoBitsPerSecond:8e6}:{})}catch(e){say("Enregistrement impossible sur ce navigateur.",true);rec=null;return}
+  rec.ondataavailable=function(e){if(e.data&&e.data.size)chunks.push(e.data)};
+  rec.onstop=function(){var b=new Blob(chunks,{type:mime||"video/webm"}),a=document.createElement("a");a.href=URL.createObjectURL(b);a.download="icam-voile-j80-logo."+(/mp4/.test(mime)?"mp4":"webm");document.body.appendChild(a);a.click();a.remove();
+    rec=null;vid.loop=true;recBtn.textContent="Enregistrer la vidéo";say("Vidéo enregistrée.");setPlaying(true)};
+  vid.pause();vid.loop=false;vid.currentTime=0;
+  var go=function(){vid.removeEventListener("seeked",go);rec.start(500);setPlaying(true)};vid.addEventListener("seeked",go);
+  vid.addEventListener("ended",function stop(){vid.removeEventListener("ended",stop);if(rec&&rec.state!=="inactive")rec.stop()});
+  recBtn.textContent="Arrêter l'enregistrement";say("Enregistrement en cours : 30 secondes, ne changez pas d'onglet.")});
+})();
+</script>
+<script>document.querySelectorAll("#simtabs button").forEach(function(b){b.addEventListener("click",function(){var v=b.dataset.t==="veste";document.getElementById("simulateur").hidden=v;document.getElementById("simveste").hidden=!v;document.querySelectorAll("#simtabs button").forEach(function(x){x.setAttribute("aria-pressed",x===b)})})})</script>
+</body>
+</html>
